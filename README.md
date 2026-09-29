@@ -1,17 +1,16 @@
 # JFEJ
-jalifert/
+jalifert-site/
 │
-├── index.html                 # Page principale
+├── index.html               # Onglet "Accueil"
+├── description.html         # Onglet "Description & Vidéo"
+├── vie-scolaire.html        # Onglet "Vie Scolaire & Clubs"
+│
 ├── css/
-│   ├── variables.css          # Variables CSS (couleurs, animations)
-│   ├── globals.css            # Styles globaux (body, html, reset)
-│   ├── header.css             # Styles du header/topbar
-│   ├── toggle-dark-mode.css   # Styles du toggle sombre/clair
-│   ├── section.css            # Styles des sections (accueil, etc)
-│   └── responsive.css         # Media queries
+│   ├── common.css           # Style global (menu navigation, thème sombre, couleurs)
+│   ├── index.css            # Styles spécifiques à la page Accueil
+│   ├── description.css      # Styles spécifiques à la page Description & Vidéo
+│   └── vie-scolaire.css     # Styles spécifiques à la page Vie Scolaire & Clubs
 │
-├── js/
-│   ├── dark-mode.js           # Logique du mode sombre
-│   └── main.js                # Logique générale
-│
-└── README.md 
+└── js/
+    ├── navigation.js        # Script global (actif sur les 3 pages)
+    └── interactive.js       # Script spécifique (gestion dynamique du contenu)

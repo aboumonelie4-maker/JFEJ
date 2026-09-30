@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JFEJ School — Accueil</title>
+  <meta name="description" content="JFEJ School, une plateforme sociale simple et moderne pour communiquer, partager et rester connecté." />
+  <link rel="stylesheet" href="../CSS/common.css">
+  <link rel="stylesheet" href="../CSS/index.css">
+  <link rel="stylesheet" href="../CSS/description.css">
+  <link rel="stylesheet" href="../CSS/vie-scolaire.css">
+</head>
+<body>
+  <input type="checkbox" id="dark-mode-toggle">
+
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="JFEJ School">
+        <div class="brand-mark">
+          <span class="sparkle">✦</span>
+          <div class="logo-inner">
+            <span class="letter-j">J</span>
+          </div>
+        </div>
+        <div class="brand-text">
+          <strong>JFEJ School</strong>
+          <span>Mini réseau social scolaire</span>
+        </div>
+      </a>
+
+      <nav class="menu" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html" aria-current="page">Accueil</a></li>
+          <li><a href="description.html">Description</a></li>
+          <li><a href="vie-scolaire.html">Vie scolaire</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <label class="toggle-dark-mode" for="dark-mode-toggle" aria-label="Basculer le mode sombre">
+          <div class="toggle-track">
+            <div class="toggle-knob">
+              <span class="toggle-icon toggle-icon--sun">☀</span>
+              <span class="toggle-icon toggle-icon--moon">☽</span>
+            </div>
+          </div>
+        </label>
+        <a href="#login" class="btn-cta">Se connecter</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="accueil" class="card-section">
+      <h1>Bienvenue sur JFEJ School !</h1>
+      <p>Créé par notre équipe, <strong>JFEJ School</strong> est bien plus qu'un simple mini <strong>réseau social</strong> : c'est un lieu chaleureux, simple et instructif conçu pour vous connecter à l'essentiel.</p>
+      <p>Ici, pas d'algorithmes complexes ni de fil d'actualité surchargé. Que vous soyez là pour découvrir nos contenus, échanger avec la communauté ou simplement partager vos idées, tout a été pensé pour que votre navigation soit fluide, agréable et authentique.</p>
+      
+      <h2>Nous vous garantissons :</h2>
+      <ul class="features-list">
+
+        <details>
+          <summary>
+           <strong> <li>Une expérience utilisateur stable et fluide</strong></li>
+          </summary>
+          <p><strong>Sur notre site, tout est super rapide et hyper fluide ! Pas de ralentissements ni de bugs : vous naviguez en toute tranquillité et avec un vrai confort. C'est un vrai plaisir d'être ici !</strong></p>
+        </details> 
+
+          <details>
+            <summary><strong>Sécurité et intimité renforcée</strong></li></summary>
+            <p><strong>Grace a nos services qui sont a l'affut pour vous prevenir de tout danger potentiel,vous pourrez profiter d'une experience utilisateur simple et effiace pour les cours et interactions avec vos enseignants et camarades</strong></p>
+          </details>
+
+        <details>
+          <summary>
+            <li><strong>Un support client réactif</strong></li>
+          </summary>
+          <p><strong>Une équipe de support est disponible 24/7 pour vous aider avec tout problème ou question que vous pourriez avoir.</strong></p>
+        </details>
+
+      </ul>
+    </section>
+  </main>
+
+  <script src="../JS/navigation.js"></script>
+  <script src="../JS/interactive.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JFEJ School — Description & Vidéo</title>
+  <meta name="description" content="Découvrez le projet JFEJ School à travers notre présentation et notre vidéo." />
+  <link rel="stylesheet" href="../CSS/common.css">
+  <link rel="stylesheet" href="../CSS/index.css">
+  <link rel="stylesheet" href="../CSS/description.css">
+  <link rel="stylesheet" href="../CSS/vie-scolaire.css">
+</head>
+<body>
+  <input type="checkbox" id="dark-mode-toggle">
+
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="JALIFERT">
+        <div class="brand-mark">
+          <span class="sparkle">✦</span>
+          <div class="logo-inner">
+            <span class="letter-j">J</span>
+          </div>
+        </div>
+        <div class="brand-text">
+          <strong>JEFJ School</strong>
+          <span>Mini réseau social</span>
+        </div>
+      </a>
+
+      <nav class="menu" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="description.html" aria-current="page">Description</a></li>
+          <li><a href="vie-scolaire.html">Vie scolaire</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <label class="toggle-dark-mode" for="dark-mode-toggle" aria-label="Basculer le mode sombre">
+          <div class="toggle-track">
+            <div class="toggle-knob">
+              <span class="toggle-icon toggle-icon--sun">☀</span>
+              <span class="toggle-icon toggle-icon--moon">☽</span>
+            </div>
+          </div>
+        </label>
+        <a href="#login" class="btn-cta">Se connecter</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="description" class="card-section">
+      <h1>Description du Projet</h1>
+      <p>JEFJ School réinvente la communication scolaire en offrant une plateforme sécurisée et centralisée. Découvrez la présentation complète du projet ci-dessous.</p>
+      
+      <div class="video-container">
+        <video controls>
+          <source src="presentation.mp4" type="video/mp4">
+          Votre navigateur ne prend pas en charge la lecture de vidéo.
+        </video>
+      </div>
+    </section>
+  </main>
+
+  <script src="../JS/navigation.js"></script>
+  <script src="../JS/interactive.js"></script>
+</body>
+</html>

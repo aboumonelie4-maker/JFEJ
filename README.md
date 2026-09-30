@@ -1,4 +1,3 @@
-# JFEJ
 jalifert-site/
 │
 ├── index.html               # Onglet "Accueil"
@@ -13,4 +12,4 @@ jalifert-site/
 │
 └── js/
     ├── navigation.js        # Script global (actif sur les 3 pages)
-    └── interactive.js       # Script spécifique (gestion dynamique du contenu)
+    └── interactive.js       # Script spécifique

@@ -220,27 +220,57 @@ body::before {
 }
 
 .menu a {
-  display: flex;
+  position: relative;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   height: 38px;
-  padding: 0 16px;
+  padding: 0 14px;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
   color: var(--muted);
   text-decoration: none;
-  transition: background var(--dur) ease, color var(--dur) ease;
+  transition: color var(--dur) ease, background var(--dur) ease;
+  overflow: hidden;
 }
 
-.menu a:hover {
-  background: var(--surface2);
-  color: var(--accent);
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 6px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+  color: var(--text);
+  background: rgba(124, 106, 247, 0.06);
+}
+
+.menu a:hover::after,
+.menu a:focus-visible::after,
+.menu a[aria-current="page"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .menu a[aria-current="page"] {
-  background: rgba(124, 106, 247, 0.12);
-  color: var(--accent);
+  color: var(--text);
+  background: rgba(124, 106, 247, 0.08);
   font-weight: 700;
+}
+
+.menu a:focus-visible {
+  outline: 2px solid rgba(124, 106, 247, 0.4);
+  outline-offset: 2px;
 }
 
 /* TOGGLE DARK MODE */

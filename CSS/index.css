@@ -5,6 +5,17 @@
   margin: 15px 0;
 }
 
+#accueil h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 #accueil h2 {
   font-size: 1.25rem;
   color: var(--text);
@@ -21,4 +32,10 @@
   border-radius: 8px;
   font-weight: 600;
   transition: background var(--dur) ease;
+}
+
+@media (max-width: 768px) {
+  #accueil h1 {
+    font-size: 2.5rem;
+  }
 }

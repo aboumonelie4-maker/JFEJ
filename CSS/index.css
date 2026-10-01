@@ -5,6 +5,10 @@
   margin: 15px 0;
 }
 
+#accueil.card-section {
+  max-width: 1200px;
+}
+
 #accueil h1 {
   font-size: 5rem;
   font-weight: 800;
@@ -24,8 +28,8 @@
 
 .accueil-hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1fr;
+  gap: 30px;
   align-items: center;
   margin-bottom: 40px;
 }
@@ -33,6 +37,8 @@
 .accueil-left {
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .accueil-right {
@@ -57,11 +63,11 @@
 }
 
 .chat-desktop {
-  max-width: 280px;
+  width: 420px;
 }
 
 .chat-mobile {
-  max-width: 180px;
+  width: 680px;
 }
 
 .accueil-description {
@@ -93,12 +99,9 @@
   }
 
   .chat-desktop {
-    max-width: 240px;
+    width: 380px;
   }
 
-  .chat-mobile {
-    max-width: 160px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -115,11 +118,7 @@
   }
 
   .chat-desktop {
-    max-width: 200px;
-  }
-
-  .chat-mobile {
-    max-width: 130px;
+    width: 340px;
   }
 
   .accueil-description {

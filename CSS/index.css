@@ -27,6 +27,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .accueil-left {
@@ -36,8 +37,37 @@
 
 .accueil-right {
   display: flex;
-  flex-direction: column;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.chat-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+}
+
+.chat-desktop {
+  max-width: 280px;
+}
+
+.chat-mobile {
+  max-width: 180px;
+}
+
+.accueil-description {
+  grid-column: 1 / -1;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
 }
 
 .features-list {
@@ -61,6 +91,14 @@
   #accueil h1 {
     font-size: 3.5rem;
   }
+
+  .chat-desktop {
+    max-width: 240px;
+  }
+
+  .chat-mobile {
+    max-width: 160px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -70,5 +108,21 @@
 
   .accueil-hero {
     gap: 30px;
+  }
+
+  .accueil-right {
+    gap: 15px;
+  }
+
+  .chat-desktop {
+    max-width: 200px;
+  }
+
+  .chat-mobile {
+    max-width: 130px;
+  }
+
+  .accueil-description {
+    grid-column: 1;
   }
 }

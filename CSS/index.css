@@ -7,6 +7,8 @@
 
 #accueil.card-section {
   max-width: 1200px;
+  border: none;
+  box-shadow: 0 8px 32px var(--glow), 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 #accueil h1 {
@@ -44,8 +46,8 @@
 .accueil-right {
   display: flex;
   gap: 20px;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  align-items: right;
   flex-wrap: wrap;
 }
 

@@ -6,10 +6,10 @@
 }
 
 #accueil h1 {
-  font-size: 4.5rem;
+  font-size: 5rem;
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 40px;
+  margin: 0;
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   -webkit-background-clip: text;
   background-clip: text;
@@ -20,6 +20,24 @@
   font-size: 1.25rem;
   color: var(--text);
   margin: 25px 0 15px;
+}
+
+.accueil-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.accueil-left {
+  display: flex;
+  align-items: center;
+}
+
+.accueil-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .features-list {
@@ -34,8 +52,23 @@
   transition: background var(--dur) ease;
 }
 
+@media (max-width: 1024px) {
+  .accueil-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  #accueil h1 {
+    font-size: 3.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   #accueil h1 {
     font-size: 2.5rem;
+  }
+
+  .accueil-hero {
+    gap: 30px;
   }
 }

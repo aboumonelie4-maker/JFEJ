@@ -45,10 +45,9 @@
 
 .accueil-right {
   display: flex;
+  flex-direction: column;
   gap: 20px;
-  justify-content: right;
-  align-items: right;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
 .chat-image {
@@ -66,10 +65,12 @@
 
 .chat-desktop {
   width: 420px;
+  align-self: right;
 }
 
 .chat-mobile {
   width: 680px;
+  align-self: right;
 }
 
 .accueil-description {
@@ -134,6 +135,10 @@
 
   .accueil-right {
     gap: 15px;
+  }
+
+  .chat-mobile {
+    width: 280px;
   }
 
   .chat-desktop {

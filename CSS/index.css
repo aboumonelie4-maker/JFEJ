@@ -8,7 +8,9 @@
 #accueil.card-section {
   max-width: 1200px;
   border: none;
-  box-shadow: 0 8px 32px var(--glow), 0 1px 3px rgba(0, 0, 0, 0.06);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 #accueil h1 {
@@ -30,7 +32,7 @@
 
 .accueil-hero {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 30px;
   align-items: center;
   margin-bottom: 40px;
@@ -38,9 +40,10 @@
 
 .accueil-left {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .accueil-right {
@@ -54,13 +57,12 @@
   max-width: 100%;
   height: auto;
   border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  transition: transform 0.3s ease;
 }
 
 .chat-image:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
 }
 
 .chat-desktop {
@@ -68,15 +70,8 @@
   align-self: right;
 }
 
-.chat-mobile {
-  width: 680px;
-  align-self: right;
-}
-
 .accueil-description {
-  grid-column: 1 / -1;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
+  margin-top: 20px;
 }
 
 .features-list {

@@ -32,7 +32,15 @@
         <ul>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="description.html">Description</a></li>
-          <li><a href="vie-scolaire.html" aria-current="page">Vie scolaire</a></li>
+          <li class="menu-item-with-panel">
+            <a href="vie-scolaire.html" aria-current="page">Vie scolaire ▾</a>
+            <div class="menu-dropdown-panel" aria-label="Sous-menu Vie scolaire">
+              <a href="vie-scolaire.html#clubs" class="menu-dropdown-link">📚 Tous les clubs</a>
+              <a href="#" class="menu-dropdown-link">🎓 Spécialités</a>
+              <a href="#" class="menu-dropdown-link">⚽ Sport & E-Sport</a>
+              <a href="#" class="menu-dropdown-link">📖 Entraide & Devoirs</a>
+            </div>
+          </li>
         </ul>
       </nav>
 
@@ -55,7 +63,7 @@
       <h1>Vie Scolaire & Clubs</h1>
       <p>Rejoins les clubs officiels de ton établissement et participe aux activités de la communauté JFEJ School.</p>
 
-      <div class="clubs-grid">
+      <div class="clubs-grid" id="clubs">
         <article class="club-card">
           <h2>Club de spécialités personalisées</h2>
           <p>Tu choisis ton groupe de spés, participe à ses activités et événements</p>

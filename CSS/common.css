@@ -54,10 +54,10 @@
   
   /* Mode Clair */
   --bg: #fff1f6;
-  --surface: #ffffff30;
-  --surface2: #fff7fa34;
-  --border: #f3d5e300;
-  --text: #22102c;
+  --surface: #ffffff;
+  --surface2: #fff7fa;
+  --border: #f3d5e3;
+  --text: #1a1530;
   --muted: #8675da;
   --details-text: #a5588c;
   --accent: #7c6af7;
@@ -72,12 +72,12 @@
   --details: rgba(178, 39, 220, 0.8);
 }
 
-:root.dark-mode {
+body.dark-mode {
   --bg: #08061a;
-  --surface: #0f0c2448;
-  --surface2: #13102c3e;
-  --border: #2a244a00;
-  --text: #fcebfe;
+  --surface: #0f0c24;
+  --surface2: #13102c;
+  --border: #2a244a;
+  --text: #e8e3ff;
   --muted: #8b77cf;
   --details-text: #f781fd;
   --accent: #9d8eff;
@@ -237,6 +237,19 @@ body::before {
   list-style: none;
 }
 
+.menu li {
+  position: relative;
+}
+
+.menu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 12px;
+}
+
 .menu a {
   position: relative;
   display: inline-flex;
@@ -249,8 +262,8 @@ body::before {
   font-weight: 600;
   color: var(--muted);
   text-decoration: none;
-  transition: color var(--dur) ease, background var(--dur) ease;
-  overflow: hidden;
+  transition: color var(--dur) ease, background var(--dur) ease, transform var(--dur) ease;
+  overflow: visible;
 }
 
 .menu a::after {
@@ -268,13 +281,15 @@ body::before {
 }
 
 .menu a:hover,
-.menu a:focus-visible {
+.menu a:focus-visible,
+.menu li:hover > a {
   color: var(--text);
   background: rgba(124, 106, 247, 0.06);
 }
 
 .menu a:hover::after,
 .menu a:focus-visible::after,
+.menu li:hover > a::after,
 .menu a[aria-current="page"]::after {
   transform: scaleX(1);
   transform-origin: left;
@@ -289,6 +304,52 @@ body::before {
 .menu a:focus-visible {
   outline: 2px solid rgba(124, 106, 247, 0.4);
   outline-offset: 2px;
+}
+
+.menu-dropdown-panel {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-12px);
+  min-width: 220px;
+  background: rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(122, 92, 188, 0.22), inset 0 1px 0 rgba(255,255,255,0.4);
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1000;
+}
+
+.menu li:hover .menu-dropdown-panel,
+.menu li:focus-within .menu-dropdown-panel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.menu-dropdown-link {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.menu-dropdown-link:hover,
+.menu-dropdown-link:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
 }
 
 /* TOGGLE DARK MODE */
@@ -376,26 +437,24 @@ body.dark-mode .toggle-icon--moon {
 
 /* SECTIONS COMMUNE */
 .card-section {
-  max-width: 1300px;
+  max-width: 1000px;
   margin: 60px auto;
-  padding: 70px 50px;
+  padding: 40px 20px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 20px;
   box-shadow: var(--card-shadow);
   transition: background var(--dur) ease, border-color var(--dur) ease;
-  border-color: transparent; 
 }
 
 .card-section h1 {
   font-size: 2.5rem;
-  color: var(--bg);
+  color: var(--text);
   margin-bottom: 20px;
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  border-color: transparent; 
 }
 
 @media (max-width: 768px) {
@@ -403,3 +462,10 @@ body.dark-mode .toggle-icon--moon {
   .brand-text span { display: none; }
   .card-section { margin: 40px auto; padding: 20px; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-dropdown-panel {
+    transition: none;
+  }
+}
+

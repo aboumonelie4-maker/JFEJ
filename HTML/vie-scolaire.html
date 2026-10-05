@@ -56,17 +56,52 @@
       <p>Rejoins les clubs officiels de ton établissement et participe aux activités de la communauté JFEJ School.</p>
 
       <div class="clubs-grid">
+        <!-- Club 1: Spécialités -->
         <article class="club-card">
-          <h2>Club de spécialités personalisées</h2>
-          <p>Tu choisis ton groupe de spés, participe à ses activités et événements</p>
+          <div class="club-header">
+            <h2>Mathématique</h2>
+            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
+          </div>
+          <p>Le club des matheux</p>
+          
+          <div class="club-dropdown-panel">
+            <a href="#" class="club-dropdown-link">Les Olympiens des Maths</a>
+            <a href="#" class="club-dropdown-link">SOS Mathématiques</a>
+            <a href="#" class="club-dropdown-link">Maths & Horizon</a>
+            <a href="#" class="club-dropdown-link">📅 Événements</a>
+          </div>
         </article>
+
+        <!-- Club 2: Sport -->
         <article class="club-card">
-          <h2>Club Sport & E-Sport</h2>
-          <p>Organisation de tournois sportifs et compétitions de jeux vidéo.</p>
+          <div class="club-header">
+            <h2>Physique</h2>
+            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
+          </div>
+          <p>La section des passionnés de sciences.</p>
+          
+          <div class="club-dropdown-panel">
+            <a href="#" class="club-dropdown-link">🏆 Sciences</a>
+            <a href="#" class="club-dropdown-link">⚽ Sports</a>
+            <a href="#" class="club-dropdown-link">🎮 E-Sport</a>
+            <a href="#" class="club-dropdown-link">📊 Classement</a>
+          </div>
         </article>
+
+        <!-- Club 3: Entraide -->
         <article class="club-card">
-          <h2>Espace Entraide & Devoirs</h2>
+          <div class="club-header">
+            <h2>Svt</h2>
+            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
+          </div>
           <p>Entraide entre élèves pour les devoirs, révisions et tutorat.</p>
+          
+          <div class="club-dropdown-panel">
+            <a href="#" class="club-dropdown-link">📚 Ressources</a>
+            <a href="#" class="club-dropdown-link">❓ Questions</a>
+            <a href="#" class="club-dropdown-link">👨‍🏫 Tuteurs</a>
+            <a href="#" class="club-dropdown-link">📖 Révisions</a>
+          </div>
         </article>
       </div>
     </section>
@@ -74,5 +109,30 @@
 
   <script src="../JS/navigation.js"></script>
   <script src="../JS/interactive.js"></script>
+    <script>
+    // Dropdown functionality
+    document.querySelectorAll('.club-dropdown-trigger').forEach(trigger => {
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const card = this.closest('.club-card');
+        const panel = card.querySelector('.club-dropdown-panel');
+        
+        // Close other panels
+        document.querySelectorAll('.club-dropdown-panel').forEach(p => {
+          if (p !== panel) p.classList.remove('active');
+        });
+        
+        // Toggle current panel
+        panel.classList.toggle('active');
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.club-dropdown-panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>

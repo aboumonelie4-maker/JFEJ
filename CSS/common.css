@@ -54,10 +54,10 @@
   
   /* Mode Clair */
   --bg: #fff1f6;
-  --surface: #ffffff;
-  --surface2: #fff7fa;
-  --border: #f3d5e3;
-  --text: #1a1530;
+  --surface: #ffffff30;
+  --surface2: #fff7fa34;
+  --border: #f3d5e300;
+  --text: #22102c;
   --muted: #8675da;
   --details-text: #a5588c;
   --accent: #7c6af7;
@@ -72,12 +72,12 @@
   --details: rgba(178, 39, 220, 0.8);
 }
 
-body.dark-mode {
+:root.dark-mode {
   --bg: #08061a;
-  --surface: #0f0c24;
-  --surface2: #13102c;
-  --border: #2a244a;
-  --text: #e8e3ff;
+  --surface: #0f0c2448;
+  --surface2: #13102c3e;
+  --border: #2a244a00;
+  --text: #fcebfe;
   --muted: #8b77cf;
   --details-text: #f781fd;
   --accent: #9d8eff;
@@ -376,24 +376,26 @@ body.dark-mode .toggle-icon--moon {
 
 /* SECTIONS COMMUNE */
 .card-section {
-  max-width: 1000px;
+  max-width: 1300px;
   margin: 60px auto;
-  padding: 40px 20px;
+  padding: 70px 50px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 20px;
   box-shadow: var(--card-shadow);
   transition: background var(--dur) ease, border-color var(--dur) ease;
+  border-color: transparent; 
 }
 
 .card-section h1 {
   font-size: 2.5rem;
-  color: var(--text);
+  color: var(--bg);
   margin-bottom: 20px;
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  border-color: transparent; 
 }
 
 @media (max-width: 768px) {
@@ -401,4 +403,3 @@ body.dark-mode .toggle-icon--moon {
   .brand-text span { display: none; }
   .card-section { margin: 40px auto; padding: 20px; }
 }
-

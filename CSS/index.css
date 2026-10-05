@@ -74,6 +74,11 @@
   margin-top: 20px;
 }
 
+.garanties-title {
+  font-size: 2rem; /* agrandit le titre */
+  opacity: 0.6;    /* le rend partiellement transparent */
+}
+
 .features-list {
   list-style: none;
 }

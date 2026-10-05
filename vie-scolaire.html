@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JFEJ School — Vie Scolaire & Clubs</title>
+  <meta name="description" content="Découvrez la vie scolaire et rejoignez les différents clubs." />
+  <link rel="stylesheet" href="../CSS/common.css">
+  <link rel="stylesheet" href="../CSS/index.css">
+  <link rel="stylesheet" href="../CSS/description.css">
+  <link rel="stylesheet" href="../CSS/vie-scolaire.css">
+</head>
+<body>
+  <input type="checkbox" id="dark-mode-toggle">
+
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="JALIFERT">
+        <div class="brand-mark">
+          <span class="sparkle">✦</span>
+          <div class="logo-inner">
+            <span class="letter-j">J</span>
+          </div>
+        </div>
+        <div class="brand-text">
+          <strong>JFEJ School</strong>
+          <span>Mini réseau social</span>
+        </div>
+      </a>
+
+      <nav class="menu" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="description.html">Description</a></li>
+          <li><a href="vie-scolaire.html" aria-current="page">Vie scolaire</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <label class="toggle-dark-mode" for="dark-mode-toggle" aria-label="Basculer le mode sombre">
+          <div class="toggle-track">
+            <div class="toggle-knob">
+              <span class="toggle-icon toggle-icon--sun">☀</span>
+              <span class="toggle-icon toggle-icon--moon">☽</span>
+            </div>
+          </div>
+        </label>
+        <a href="#login" class="btn-cta">Se connecter</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="vie-scolaire" class="card-section">
+      <h1>Vie Scolaire & Clubs</h1>
+      <p>Rejoins les clubs officiels de ton établissement et participe aux activités de la communauté JFEJ School.</p>
+
+      <div class="clubs-grid">
+        <!-- Club 1: Spécialités -->
+        <article class="club-card">
+          <div class="club-header">
+            <h2>Mathématique</h2>
+            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
+          </div>
+          <p>Le club des matheux</p>
+          
+          <div class="club-dropdown-panel">
+            <a href="#" class="club-dropdown-link">Les Olympiens des Maths</a>
+            <a href="#" class="club-dropdown-link">SOS Mathématiques</a>
+            <a href="#" class="club-dropdown-link">Maths & Horizon</a>
+            <a href="#" class="club-dropdown-link">📅 Événements</a>
+          </div>
+        </article>
+
+        <!-- Club 2: Sport -->
+        <article class="club-card">
+          <div class="club-header">
+            <h2>Physique</h2>
+            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
+          </div>
+          <p>La section des passionnés de sciences.</p>
+          
+          <div class="club-dropdown-panel">
+            <a href="#" class="club-dropdown-link">🏆 Sciences</a>
+            <a href="#" class="club-dropdown-link">⚽ Sports</a>
+            <a href="#" class="club-dropdown-link">🎮 E-Sport</a>
+            <a href="#" class="club-dropdown-link">📊 Classement</a>
+          </div>
+        </article>
+
+        <!-- Club 3: Entraide -->
+        <article class="club-card">
+          <div class="club-header">
+            <h2>Svt</h2>
+            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
+          </div>
+          <p>Entraide entre élèves pour les devoirs, révisions et tutorat.</p>
+          
+          <div class="club-dropdown-panel">
+            <a href="#" class="club-dropdown-link">📚 Ressources</a>
+            <a href="#" class="club-dropdown-link">❓ Questions</a>
+            <a href="#" class="club-dropdown-link">👨‍🏫 Tuteurs</a>
+            <a href="#" class="club-dropdown-link">📖 Révisions</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="../JS/navigation.js"></script>
+  <script src="../JS/interactive.js"></script>
+    <script>
+    // Dropdown functionality
+    document.querySelectorAll('.club-dropdown-trigger').forEach(trigger => {
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const card = this.closest('.club-card');
+        const panel = card.querySelector('.club-dropdown-panel');
+        
+        // Close other panels
+        document.querySelectorAll('.club-dropdown-panel').forEach(p => {
+          if (p !== panel) p.classList.remove('active');
+        });
+        
+        // Toggle current panel
+        panel.classList.toggle('active');
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.club-dropdown-panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

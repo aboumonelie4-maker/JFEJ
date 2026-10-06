@@ -60,8 +60,12 @@
   --text: #22102c;
   --muted: #8675da;
   --details-text: #a5588c;
-  --accent: #7c6af7;
+  --accent: #b125e9;
+  --accent1: red;
   --accent2: #e91e8c;
+  --accent3: green;
+  --accent4: blue;
+  --accent5: maroon;
   --button-start: #a02ef1;
   --button-end: #e91e8c;
   --button-glow: rgba(125, 106, 247, 0.733);

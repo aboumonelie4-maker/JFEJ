@@ -57,13 +57,72 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
+.club-card1 h2 {
+  font-size: 1.2rem;
+  color: var(--accent1);
+  margin: 0;
+  flex: 1;
+}
+.club-card2 h2 {
+  font-size: 1.2rem;
+  color: var(--accent3);
+  margin: 0;
+  flex: 1;
+}
+.club-card3 h2 {
+  font-size: 1.2rem;
+  color: var(--accent4);
+  margin: 0;
+  flex: 1;
+}
+.club-card4 h2 {
+  font-size: 1.2rem;
+  color: var(--accent5);
+  margin: 0;
+  flex: 1;
+}
+.club-card5 h2 {
+  font-size: 1.2rem;
+  color: var(--accent6);
+  margin: 0;
+  flex: 1;
+}
 .club-card h2 {
   font-size: 1.2rem;
   color: var(--accent);
   margin: 0;
   flex: 1;
+}
+
+.club-card:first-of-type h2 {
+  color: red;
+}
+
+.club-card:last-of-type h2 {
+  color: brown;
+}
+
+.club-card:nth-of-type(2) h2 {
+  color: orange;
+}
+
+.club-card:nth-of-type(3) h2 {
+  color: green;
+}
+
+.club-card:nth-of-type(5) h2 {
+  color: rgb(190, 69, 69);
+}
+
+.club-card:nth-of-type(6) h2 {
+  color: purple;
+}
+
+.club-card:nth-of-type(7) h2 {
+  color: rgb(20, 201, 201);
 }
 
 .club-card p {

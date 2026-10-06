@@ -1,207 +1,215 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JFEJ School — Vie Scolaire & Clubs</title>
-  <meta name="description" content="Découvrez la vie scolaire et rejoignez les différents clubs." />
-  <link rel="stylesheet" href="../CSS/common.css">
-  <link rel="stylesheet" href="../CSS/index.css">
-  <link rel="stylesheet" href="../CSS/description.css">
-  <link rel="stylesheet" href="../CSS/vie-scolaire.css">
-</head>
-<body>
-  <input type="checkbox" id="dark-mode-toggle">
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
 
-  <header class="topbar">
-    <div class="container nav">
-      <a href="index.html" class="brand" aria-label="JALIFERT">
-        <div class="brand-mark">
-          <span class="sparkle">✦</span>
-          <div class="logo-inner">
-            <span class="letter-j">J</span>
-          </div>
-        </div>
-        <div class="brand-text">
-          <strong>JFEJ School</strong>
-          <span>Mini réseau social</span>
-        </div>
-      </a>
+.club-card {
+  padding: 20px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: transform var(--dur) ease, border-color var(--dur) ease;
+}
 
-      <nav class="menu" aria-label="Navigation principale">
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="description.html">Description</a></li>
-          <li><a href="vie-scolaire.html" aria-current="page">Vie scolaire</a></li>
-        </ul>
-      </nav>
+.club-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
 
-      <div class="actions">
-        <label class="toggle-dark-mode" for="dark-mode-toggle" aria-label="Basculer le mode sombre">
-          <div class="toggle-track">
-            <div class="toggle-knob">
-              <span class="toggle-icon toggle-icon--sun">☀</span>
-              <span class="toggle-icon toggle-icon--moon">☽</span>
-            </div>
-          </div>
-        </label>
-        <a href="#login" class="btn-cta">Se connecter</a>
-      </div>
-    </div>
-  </header>
+.club-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
 
-  <main>
-    <section id="vie-scolaire" class="card-section">
-      <h1>Vie Scolaire & Clubs</h1>
-      <p>Rejoins les clubs officiels de ton établissement et participe aux activités de la communauté JFEJ School.</p>
+.club-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
 
-      <div class="clubs-grid">
-        <!-- Spécialités Scientifiques -->
+.club-card {
+  position: relative;
+  padding: 20px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: transform var(--dur) ease, border-color var(--dur) ease, box-shadow var(--dur) ease;
+}
 
-        
-        <article class="club-card">
-          <div class="club-header">
-            <h2>Mathématique</h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
-          </div>
-          <p>L'art du raisonnement pur au service des sciences.</p>
-          
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements  </a>
-          </div>
-        </article>
+.club-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(124, 106, 247, 0.15);
+}
 
-        <article class="club-card">
-          <div class="club-header">
-            <h2>Physique</h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
-          </div>
-          <p>Déchiffrer les lois fondamentales et les métamorphoses de la matière.</p>
-          
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
-          </div>
-        </article>
+/* Club card header with dropdown trigger */
+.club-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
 
-        <article class="club-card">
-          <div class="club-header">
-            <h2>Science de la Vie et de la Terre</h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
-          </div>
-          <p>Élucider les mécanismes de la vie, de la molécule à l'écosystème.</p>
-          
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
-          </div>
-        </article>
+.club-card1 h2 {
+  font-size: 1.2rem;
+  color: var(--accent1);
+  margin: 0;
+  flex: 1;
+}
+.club-card2 h2 {
+  font-size: 1.2rem;
+  color: var(--accent3);
+  margin: 0;
+  flex: 1;
+}
+.club-card3 h2 {
+  font-size: 1.2rem;
+  color: var(--accent4);
+  margin: 0;
+  flex: 1;
+}
+.club-card4 h2 {
+  font-size: 1.2rem;
+  color: var(--accent5);
+  margin: 0;
+  flex: 1;
+}
+.club-card5 h2 {
+  font-size: 1.2rem;
+  color: var(--accent6);
+  margin: 0;
+  flex: 1;
+}
+.club-card h2 {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin: 0;
+  flex: 1;
+}
 
-        <article class="club-card">
-          <div class="club-header">
-            <h2> Numérique et Sciences Informatiques (NSI) </h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
-          </div>
-          <p> Structurer la donnée, maîtriser le code, concevoir les systèmes de demain. </p>
+.club-card:first-of-type h2 {
+  color: red;
+}
 
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
-          </div>
-        </article>
+.club-card:last-of-type h2 {
+  color: brown;
+}
 
-        <article class="club-card">
-          <div class="club-header">
-            <h2> Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP) </h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
-          </div>
-          <p>Des clés d'analyse historiques et géopolitiques pour appréhender les enjeux du monde contemporain.</p>
+.club-card:nth-of-type(2) h2 {
+  color: orange;
+}
 
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
-          </div>
-        </article>
+.club-card:nth-of-type(3) h2 {
+  color: green;
+}
 
-       <article class="club-card">
-          <div class="club-header">
-            <h2> Sciences Économiques et Sociales (SES) </h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
-          </div>
-          <p> Allier la rigueur quantitative de l'économie à la finesse d'analyse de la sociologie. </p>
+.club-card:nth-of-type(5) h2 {
+  color: rgb(190, 69, 69);
+}
 
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
-          </div>
-        </article>
+.club-card:nth-of-type(6) h2 {
+  color: purple;
+}
 
-        <article class="club-card">
-          <div class="club-header">
-            <h2> Humanités, Littérature et Philosophie (HLP) </h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
-          </div>
-          <p> De la puissance du verbe à la rigueur de la pensée : explorer les grandes questions de l'humanité. </p>
+.club-card:nth-of-type(7) h2 {
+  color: rgb(20, 201, 201);
+}
 
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
-          </div>
-        </article>
+.club-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+}
 
-        <article class="club-card">
-          <div class="club-header">
-            <h2> Langues, littératures et cultures étrangères et régionales (LLCER - Anglais) </h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
-          </div>
-          <p> "Breaking through language barriers to master the thought, literature, and history of civilizations." </p>
+/* Dropdown trigger button */
+.club-dropdown-trigger {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background var(--dur) ease, color var(--dur) ease;
+  flex-shrink: 0;
+}
 
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
-          </div>
-        </article>
+.club-dropdown-trigger:hover {
+  background: rgba(124, 106, 247, 0.1);
+  color: var(--accent);
+}
 
+/* Glassmorphism dropdown panel */
+.club-dropdown-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 20px;
+  min-width: 200px;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(124, 106, 247, 0.2), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease, transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1000;
+}
 
-      </div>
-    </section>
-  </main>
+.club-dropdown-panel.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
 
-  <script src="../JS/navigation.js"></script>
-  <script src="../JS/interactive.js"></script>
-    <script>
-    // Dropdown functionality
-    document.querySelectorAll('.club-dropdown-trigger').forEach(trigger => {
-      trigger.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const card = this.closest('.club-card');
-        const panel = card.querySelector('.club-dropdown-panel');
-        
-        // Close other panels
-        document.querySelectorAll('.club-dropdown-panel').forEach(p => {
-          if (p !== panel) p.classList.remove('active');
-        });
-        
-        // Toggle current panel
-        panel.classList.toggle('active');
-      });
-    });
+/* Dropdown links */
+.club-dropdown-link {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: background 0.15s ease;
+}
 
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function() {
-      document.querySelectorAll('.club-dropdown-panel').forEach(panel => {
-        panel.classList.remove('active');
-      });
-    });
-  </script>
-</body>
-</html>
+.club-dropdown-link:hover {
+  background: rgba(124, 106, 247, 0.25);
+  color: #fff;
+}
+
+/* Dark mode adjustments */
+body.dark-mode .club-dropdown-panel {
+  background: rgba(20, 15, 40, 0.25);
+  border-color: rgba(157, 142, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(157, 142, 255, 0.15), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .club-dropdown-link:hover {
+  background: rgba(157, 142, 255, 0.25);
+}

@@ -66,7 +66,7 @@
   --accent3: green;
   --accent4: blue;
   --accent5: maroon;
-  --button-start: #a02ef1;
+  --button-start: #9303f9;
   --button-end: #e91e8c;
   --button-glow: rgba(125, 106, 247, 0.733);
   --glow: rgba(125, 106, 247, 0.598);
@@ -86,7 +86,7 @@
   --details-text: #f781fd;
   --accent: #9d8eff;
   --accent2: #ff6eb4;
-  --button-start: #a02df2;
+  --button-start: #9100f8;
   --button-end: #ff6eb4;
   --button-glow: rgba(157, 142, 255, 0.893);
   --glow: rgba(184, 70, 246, 0.553);
@@ -375,7 +375,7 @@ body.dark-mode .toggle-icon--moon {
 }
 
 .btn-cta:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 /* SECTIONS COMMUNE */

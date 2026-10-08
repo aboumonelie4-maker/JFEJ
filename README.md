@@ -1,15 +1,16 @@
-jalifert-site/
-│
-├── index.html               
-├── description.html         
-├── vie-scolaire.html        
-│
-├── css/
-│   ├── common.css           
-│   ├── index.css            
-│   ├── description.css      
-│   └── vie-scolaire.css     
-│
-└── js/
-    ├── navigation.js        
-    └── interactive.js       
+VsCode/
+├── Page d'inscription/
+│   ├── Inscription.html
+│   └── Page d'inscription.css
+├── Page de Connexion\ HTML/
+│   ├── Page de connexion.css
+│   └── Page de connexion.html
+├── Page de présentation/
+│   ├── CSS/
+│   ├── HTML/
+│   ├── JS/
+│   ├── groslalébo.jpg
+│   ├── lalé1bo..jpg
+│   ├── lalé1bo.jpg
+│   └── README.md
+└── The site/

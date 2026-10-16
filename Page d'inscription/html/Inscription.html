@@ -1,16 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta 
-            name="viewport" 
-            content="width=device-width, initial-scale=1.0" 
-        />
-        <title>Inscription</title>
-        <link rel="stylesheet" href="./styles.css" />
-    </head>
-    <body>
-        <a href="C:\Users\Neox\Desktop\VsCode\Page de Connexion\HTML\Page de connexion.html" </a>
-            <h1> Vous avez déja un compte ? Connectez vous </h1>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JFEJ School — Créer un compte</title>
+  <meta name="description" content="Rejoignez JFEJ School, le mini réseau social pour lycéens. Échangez sur vos spécialités et votre vie scolaire." />
+  
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="../../CSS/common.css" />
+  <link rel="stylesheet" href="../CSS/Page d'inscription.css" />
+</head>
+<body>
+  <input type="checkbox" id="dark-mode-toggle" />
 
-        
+  <!-- HEADER TOPBAR -->
+  <header class="topbar">
+    <div class="container nav">
+      <a href="../../HTML/index.html" class="brand" aria-label="JFEJ School">
+        <div class="brand-mark">
+          <span class="letter-j">J</span>
+        </div>
+        <div class="brand-text">
+          <strong>JFEJ School</strong>
+          <span>Mini réseau social scolaire</span>
+        </div>
+      </a>
+
+      <nav class="menu" aria-label="Navigation principale">
+        <ul>
+          <li><a href="../../HTML/index.html">Accueil</a></li>
+          <li><a href="../../HTML/description.html">Description</a></li>
+          <li><a href="../../HTML/vie-scolaire.html">Vie scolaire</a></li>
+          <li><a href="../../HTML/profil.html">Mon Profil</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <label class="toggle-dark-mode" for="dark-mode-toggle" aria-label="Basculer le mode sombre">
+          <div class="toggle-track">
+            <div class="toggle-knob">
+              <span class="toggle-icon toggle-icon--sun">☀</span>
+              <span class="toggle-icon toggle-icon--moon">☽</span>
+            </div>
+          </div>
+        </label>
+        <a href="../../Page de Connexion/HTML/Page de connexion.html" class="btn-cta">Se connecter</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL : FORMULAIRE D'INSCRIPTION -->
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Créer un compte</h1>
+        <p>Rejoignez la communauté scolaire de JFEJ School</p>
+      </div>
+
+      <!-- Zone de message d'alerte JS -->
+      <div id="auth-alert" class="auth-alert" role="alert"></div>
+
+      <form id="register-form" class="auth-form" action="#" method="POST" novalidate>
+        <!-- Ligne : Prénom et Nom -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input 
+              type="text" 
+              id="prenom" 
+              name="prenom" 
+              class="form-input" 
+              placeholder="ex: Thomas" 
+              required 
+              autocomplete="given-name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input 
+              type="text" 
+              id="nom" 
+              name="nom" 
+              class="form-input" 
+              placeholder="ex: Dupont" 
+              required 
+              autocomplete="family-name"
+            />
+          </div>
+        </div>
+
+        <!-- Ligne : Classe et Spécialité -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="classe">Classe</label>
+            <select id="classe" name="classe" class="form-select" required>
+              <option value="" disabled selected>Sélectionnez...</option>
+              <option value="Seconde">Seconde</option>
+              <option value="1ère">1ère Générale</option>
+              <option value="Terminale">Terminale Générale</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="specialite">Spécialité favorite</label>
+            <select id="specialite" name="specialite" class="form-select" required>
+              <option value="" disabled selected>Choisir une spé...</option>
+              <option value="Numérique et Sciences Informatiques (NSI)">NSI</option>
+              <option value="Mathématique">Mathématiques</option>
+              <option value="Physique-Chimie">Physique-Chimie</option>
+              <option value="SVT">SVT</option>
+              <option value="SES">SES</option>
+              <option value="HGGSP">HGGSP</option>
+              <option value="HLP">HLP</option>
+              <option value="LLCER">LLCER Anglais</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Adresse email académique / scolaire</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            class="form-input" 
+            placeholder="ex: thomas.dupont@lycee.fr" 
+            required 
+            autocomplete="email"
+          />
+        </div>
+
+        <!-- Mot de passe -->
+        <div class="form-group">
+          <label for="password">Mot de passe (6 caractères min.)</label>
+          <div class="input-container">
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              class="form-input" 
+              placeholder="••••••••" 
+              required 
+              autocomplete="new-password"
+            />
+            <button 
+              type="button" 
+              class="toggle-pwd-btn" 
+              data-target="password" 
+              aria-label="Afficher le mot de passe"
+            >👁️</button>
+          </div>
+        </div>
+
+        <!-- Confirmer le mot de passe -->
+        <div class="form-group">
+          <label for="confirm-password">Confirmer le mot de passe</label>
+          <div class="input-container">
+            <input 
+              type="password" 
+              id="confirm-password" 
+              name="confirm-password" 
+              class="form-input" 
+              placeholder="••••••••" 
+              required 
+              autocomplete="new-password"
+            />
+            <button 
+              type="button" 
+              class="toggle-pwd-btn" 
+              data-target="confirm-password" 
+              aria-label="Afficher le mot de passe"
+            >👁️</button>
+          </div>
+        </div>
+
+        <!-- Charte d'utilisation -->
+        <label class="terms-group">
+          <input type="checkbox" id="terms" name="terms" required />
+          <span>J'accepte la charte d'utilisation et le règlement intérieur de JFEJ School.</span>
+        </label>
+
+        <!-- Bouton Soumettre -->
+        <button type="submit" class="btn-submit">Créer mon compte</button>
+      </form>
+
+      <div class="auth-footer">
+        <p>Vous avez déjà un compte ? 
+          <a href="../../Page de Connexion/HTML/Page de connexion.html">Se connecter ici</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="../../JS/navigation.js"></script>
+  <script src="../../JS/auth.js"></script>
+</body>
+</html>

@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JFEJ School — Vie Scolaire & Clubs</title>
-  <meta name="description" content="Découvrez la vie scolaire et rejoignez les différents clubs." />
-  <link rel="stylesheet" href="../CSS/common.css">
-  <link rel="stylesheet" href="../CSS/index.css">
-  <link rel="stylesheet" href="../CSS/description.css">
-  <link rel="stylesheet" href="../CSS/vie-scolaire.css">
+  <title>JFEJ School — Vie Scolaire & Clubs des Spécialités</title>
+  <meta name="description" content="Découvrez les clubs de spécialités du lycée sur JFEJ School : NSI, Mathématiques, Physique, SVT, HGGSP, SES, HLP et LLCER." />
+  
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="../CSS/common.css" />
+  <link rel="stylesheet" href="../CSS/vie-scolaire.css" />
 </head>
 <body>
-  <input type="checkbox" id="dark-mode-toggle">
+  <input type="checkbox" id="dark-mode-toggle" />
 
+  <!-- HEADER TOPBAR -->
   <header class="topbar">
     <div class="container nav">
-      <a href="index.html" class="brand" aria-label="JALIFERT">
+      <a href="index.html" class="brand" aria-label="JFEJ School">
         <div class="brand-mark">
-          <div class="logo-inner">
-            <span class="letter-j">J</span>
-          </div>
+          <span class="letter-j">J</span>
         </div>
         <div class="brand-text">
           <strong>JFEJ School</strong>
-          <span>Mini réseau social</span>
+          <span>Mini réseau social scolaire</span>
         </div>
       </a>
 
@@ -32,6 +31,7 @@
           <li><a href="index.html">Accueil</a></li>
           <li><a href="description.html">Description</a></li>
           <li><a href="vie-scolaire.html" aria-current="page">Vie scolaire</a></li>
+          <li><a href="profil.html">Mon Profil</a></li>
         </ul>
       </nav>
 
@@ -44,163 +44,473 @@
             </div>
           </div>
         </label>
-        <a href="#login" class="btn-cta">Se connecter</a>
+        <a href="../Page de Connexion/HTML/Page de connexion.html" class="btn-cta">Se connecter</a>
       </div>
     </div>
   </header>
 
+  <!-- CONTENU PRINCIPAL -->
   <main>
     <section id="vie-scolaire" class="card-section">
-      <h1>Vie Scolaire & Clubs</h1>
-      <p>Rejoins les clubs officiels de ton établissement et participe aux activités de la communauté JFEJ School.</p>
+      <!-- EN-TÊTE HERO -->
+      <div class="vie-scolaire-hero">
+        <span class="hero-tag">Communauté & Entraide Lycéenne</span>
+        <h1>Vie Scolaire & Clubs des Spécialités</h1>
+        <p>
+          Rejoignez les clubs académiques de votre établissement. Échangez avec vos camarades de 1ère et Terminale, partagez vos fiches de révision et progressez ensemble vers le Baccalauréat.
+        </p>
 
-      <div class="clubs-grid">
-        <!-- Spécialités Scientifiques -->
-
-        
-        <article class="club-card">
-          <div class="club-header">
-            <h2>Mathématique</h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
+        <!-- STATISTIQUES GLOBALES -->
+        <div class="vie-scolaire-stats">
+          <div class="hero-stat-item">
+            <div class="hero-stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="hero-stat-text">
+              <strong>8 Spécialités</strong>
+              <span>Clubs officiels actifs</span>
+            </div>
           </div>
-          <p>L'art du raisonnement pur au service des sciences.</p>
-          
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements  </a>
+          <div class="hero-stat-item">
+            <div class="hero-stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="hero-stat-text">
+              <strong>+340 Élèves</strong>
+              <span>Inscrits sur JFEJ School</span>
+            </div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <div class="hero-stat-text">
+              <strong>+150 Ressources</strong>
+              <span>Fiches et exercices partagés</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTRÔLES : RECHERCHE & FILTRES -->
+      <div class="clubs-controls">
+        <div class="search-box-container">
+          <span class="search-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <input 
+            type="search" 
+            id="club-search" 
+            class="search-input" 
+            placeholder="Rechercher une matière, un mot-clé (ex: NSI, Maths, Bac)..." 
+            aria-label="Rechercher un club"
+          />
+        </div>
+
+        <div class="filter-tags" role="tablist">
+          <button class="filter-btn active" data-filter="all">Tous les clubs</button>
+          <button class="filter-btn" data-filter="sciences">Sciences & Numérique</button>
+          <button class="filter-btn" data-filter="humaines">Sciences Humaines & Éco</button>
+          <button class="filter-btn" data-filter="lettres">Lettres & Langues</button>
+        </div>
+      </div>
+
+      <!-- GRILLE DES 8 CLUBS ACADÉMIQUES -->
+      <div class="clubs-grid" id="clubs-grid">
+
+        <!-- 1. NSI -->
+        <article class="club-card" data-category="sciences" data-title="numérique et sciences informatiques nsi code python web algorithme">
+          <div class="club-top-bar">
+            <div class="club-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <span class="club-pole-badge">Sciences & Tech</span>
+          </div>
+          <div class="club-body">
+            <h2>Numérique et Sciences Informatiques (NSI)</h2>
+            <p>Structurer la donnée, maîtriser les algorithmes Python, concevoir le web et bâtir les architectures numériques de demain.</p>
+            <div class="club-meta">
+              <span class="club-meta-item"><strong>78</strong> élèves actifs</span>
+              <span class="club-meta-item"><strong>32</strong> cours & projets</span>
+            </div>
+          </div>
+          <div class="club-footer">
+            <button class="btn-club-action" data-club="NSI">Rejoindre le club</button>
+            <button class="club-dropdown-trigger" aria-label="Niveaux et événements">⋮</button>
+            <div class="club-dropdown-panel">
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('NSI', '1ère'); return false;">Classe de 1ère</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('NSI', 'Terminale'); return false;">Classe de Terminale</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('NSI', 'Événements'); return false;">Événements & Hackathons</a>
+            </div>
           </div>
         </article>
 
-        <article class="club-card">
-          <div class="club-header">
-            <h2>Physique</h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
+        <!-- 2. MATHÉMATIQUES -->
+        <article class="club-card" data-category="sciences" data-title="mathématiques maths démonstration analyse géométrie probabilités">
+          <div class="club-top-bar">
+            <div class="club-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+            </div>
+            <span class="club-pole-badge">Sciences Fondamentales</span>
           </div>
-          <p>Déchiffrer les lois fondamentales et les métamorphoses de la matière.</p>
-          
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
+          <div class="club-body">
+            <h2>Mathématiques</h2>
+            <p>L'art du raisonnement pur au service des sciences. Analyse, géométrie, suites, probabilités et résolution de problèmes complexes.</p>
+            <div class="club-meta">
+              <span class="club-meta-item"><strong>65</strong> élèves actifs</span>
+              <span class="club-meta-item"><strong>28</strong> fiches de révision</span>
+            </div>
           </div>
-        </article>
-
-        <article class="club-card">
-          <div class="club-header">
-            <h2>Science de la Vie et de la Terre</h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
-          </div>
-          <p>Élucider les mécanismes de la vie, de la molécule à l'écosystème.</p>
-          
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
-          </div>
-        </article>
-
-        <article class="club-card">
-          <div class="club-header">
-            <h2> Numérique et Sciences Informatiques (NSI) </h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
-          </div>
-          <p> Structurer la donnée, maîtriser le code, concevoir les systèmes de demain. </p>
-
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
+          <div class="club-footer">
+            <button class="btn-club-action" data-club="Mathématiques">Rejoindre le club</button>
+            <button class="club-dropdown-trigger" aria-label="Niveaux et événements">⋮</button>
+            <div class="club-dropdown-panel">
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('Mathématiques', '1ère'); return false;">Classe de 1ère</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('Mathématiques', 'Terminale'); return false;">Classe de Terminale</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('Mathématiques', 'Événements'); return false;">Concours & Olympiades</a>
+            </div>
           </div>
         </article>
 
-        <article class="club-card">
-          <div class="club-header">
-            <h2> Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP) </h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
+        <!-- 3. PHYSIQUE-CHIMIE -->
+        <article class="club-card" data-category="sciences" data-title="physique chimie matière énergie ondes mécanique réactions">
+          <div class="club-top-bar">
+            <div class="club-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31L4.1 19.46A2 2 0 0 0 5.82 22h12.36a2 2 0 0 0 1.72-2.54L14 9.31V2"/></svg>
+            </div>
+            <span class="club-pole-badge">Sciences Fondamentales</span>
           </div>
-          <p>Des clés d'analyse historiques et géopolitiques pour appréhender les enjeux du monde contemporain.</p>
-
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
+          <div class="club-body">
+            <h2>Physique-Chimie</h2>
+            <p>Déchiffrer les lois fondamentales de l'Univers, de la mécanique aux métamorphoses de la matière et des ondes électromagnétiques.</p>
+            <div class="club-meta">
+              <span class="club-meta-item"><strong>54</strong> élèves actifs</span>
+              <span class="club-meta-item"><strong>20</strong> TP & résumés</span>
+            </div>
           </div>
-        </article>
-
-       <article class="club-card">
-          <div class="club-header">
-            <h2> Sciences Économiques et Sociales (SES) </h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
-          </div>
-          <p> Allier la rigueur quantitative de l'économie à la finesse d'analyse de la sociologie. </p>
-
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
-          </div>
-        </article>
-
-        <article class="club-card">
-          <div class="club-header">
-            <h2> Humanités, Littérature et Philosophie (HLP) </h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
-          </div>
-          <p> De la puissance du verbe à la rigueur de la pensée : explorer les grandes questions de l'humanité. </p>
-
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
+          <div class="club-footer">
+            <button class="btn-club-action" data-club="Physique-Chimie">Rejoindre le club</button>
+            <button class="club-dropdown-trigger" aria-label="Niveaux et événements">⋮</button>
+            <div class="club-dropdown-panel">
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('Physique-Chimie', '1ère'); return false;">Classe de 1ère</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('Physique-Chimie', 'Terminale'); return false;">Classe de Terminale</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('Physique-Chimie', 'Événements'); return false;">Laboratoire & Expériences</a>
+            </div>
           </div>
         </article>
 
-        <article class="club-card">
-          <div class="club-header">
-            <h2> Langues, littératures et cultures étrangères et régionales (LLCER - Anglais) </h2>
-            <button class="club-dropdown-trigger" aria-label="Options du club">⋮</button>
+        <!-- 4. SVT -->
+        <article class="club-card" data-category="sciences" data-title="sciences de la vie et de la terre svt biologie génétique géologie écosystèmes">
+          <div class="club-top-bar">
+            <div class="club-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            </div>
+            <span class="club-pole-badge">Sciences Vivantes</span>
           </div>
-          <p> "Breaking through language barriers to master the thought, literature, and history of civilizations." </p>
-
-          <div class="club-dropdown-panel">
-            <a href="#" class="club-dropdown-link">1️⃣Classe de 1ère </a>
-            <a href="#" class="club-dropdown-link">⌛Classe de Terminale </a>
-            <a href="#" class="club-dropdown-link">📅 Événements</a>
+          <div class="club-body">
+            <h2>Sciences de la Vie et de la Terre (SVT)</h2>
+            <p>Élucider les mystères de la biodiversité, de la molécule d'ADN aux écosystèmes planétaires et à la géodynamique terrestre.</p>
+            <div class="club-meta">
+              <span class="club-meta-item"><strong>48</strong> élèves actifs</span>
+              <span class="club-meta-item"><strong>18</strong> schémas bilans</span>
+            </div>
+          </div>
+          <div class="club-footer">
+            <button class="btn-club-action" data-club="SVT">Rejoindre le club</button>
+            <button class="club-dropdown-trigger" aria-label="Niveaux et événements">⋮</button>
+            <div class="club-dropdown-panel">
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('SVT', '1ère'); return false;">Classe de 1ère</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('SVT', 'Terminale'); return false;">Classe de Terminale</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('SVT', 'Événements'); return false;">Sorties & Ateliers</a>
+            </div>
           </div>
         </article>
 
+        <!-- 5. HGGSP -->
+        <article class="club-card" data-category="humaines" data-title="histoire géographie géopolitique sciences politiques hggsp débats puissance frontières">
+          <div class="club-top-bar">
+            <div class="club-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <span class="club-pole-badge">Sciences Humaines</span>
+          </div>
+          <div class="club-body">
+            <h2>Histoire-Géographie, Géopolitique & Sc. Politiques (HGGSP)</h2>
+            <p>Des clés d'analyse historiques et géopolitiques pointues pour décrypter les relations internationales et les enjeux du monde contemporain.</p>
+            <div class="club-meta">
+              <span class="club-meta-item"><strong>62</strong> élèves actifs</span>
+              <span class="club-meta-item"><strong>24</strong> chronologies & fiches</span>
+            </div>
+          </div>
+          <div class="club-footer">
+            <button class="btn-club-action" data-club="HGGSP">Rejoindre le club</button>
+            <button class="club-dropdown-trigger" aria-label="Niveaux et événements">⋮</button>
+            <div class="club-dropdown-panel">
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('HGGSP', '1ère'); return false;">Classe de 1ère</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('HGGSP', 'Terminale'); return false;">Classe de Terminale</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('HGGSP', 'Événements'); return false;">Café Géopolitique & Débats</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. SES -->
+        <article class="club-card" data-category="humaines" data-title="sciences économiques et sociales ses économie sociologie marchés travail monnaie">
+          <div class="club-top-bar">
+            <div class="club-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <span class="club-pole-badge">Sciences Éco & Société</span>
+          </div>
+          <div class="club-body">
+            <h2>Sciences Économiques et Sociales (SES)</h2>
+            <p>Allier la rigueur quantitative de l'économie à la finesse d'analyse de la sociologie pour comprendre les mécanismes et structures de nos sociétés.</p>
+            <div class="club-meta">
+              <span class="club-meta-item"><strong>56</strong> élèves actifs</span>
+              <span class="club-meta-item"><strong>22</strong> synthèses & cours</span>
+            </div>
+          </div>
+          <div class="club-footer">
+            <button class="btn-club-action" data-club="SES">Rejoindre le club</button>
+            <button class="club-dropdown-trigger" aria-label="Niveaux et événements">⋮</button>
+            <div class="club-dropdown-panel">
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('SES', '1ère'); return false;">Classe de 1ère</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('SES', 'Terminale'); return false;">Classe de Terminale</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('SES', 'Événements'); return false;">Simulations Économiques</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. HLP -->
+        <article class="club-card" data-category="lettres" data-title="humanités littérature philosophie hlp éloquence pensée textes auteurs réflexion">
+          <div class="club-top-bar">
+            <div class="club-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <span class="club-pole-badge">Humanités & Lettres</span>
+          </div>
+          <div class="club-body">
+            <h2>Humanités, Littérature et Philosophie (HLP)</h2>
+            <p>De la puissance du verbe à la rigueur de la pensée critique : explorer les grandes questions de la condition humaine à travers les textes majeurs.</p>
+            <div class="club-meta">
+              <span class="club-meta-item"><strong>42</strong> élèves actifs</span>
+              <span class="club-meta-item"><strong>16</strong> commentaires & essais</span>
+            </div>
+          </div>
+          <div class="club-footer">
+            <button class="btn-club-action" data-club="HLP">Rejoindre le club</button>
+            <button class="club-dropdown-trigger" aria-label="Niveaux et événements">⋮</button>
+            <div class="club-dropdown-panel">
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('HLP', '1ère'); return false;">Classe de 1ère</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('HLP', 'Terminale'); return false;">Classe de Terminale</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('HLP', 'Événements'); return false;">Club d'Éloquence & Débats</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. LLCER -->
+        <article class="club-card" data-category="lettres" data-title="llcer anglais langues littérature civilisation débat oral expression">
+          <div class="club-top-bar">
+            <div class="club-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+            </div>
+            <span class="club-pole-badge">Langues & Civilisations</span>
+          </div>
+          <div class="club-body">
+            <h2>LLCER Anglais</h2>
+            <p>Dépasser les barrières linguistiques. Maîtriser l'expression orale et écrite tout en explorant la littérature, l'histoire et les arts du monde anglophone.</p>
+            <div class="club-meta">
+              <span class="club-meta-item"><strong>49</strong> élèves actifs</span>
+              <span class="club-meta-item"><strong>19</strong> vocabulaires & essais</span>
+            </div>
+          </div>
+          <div class="club-footer">
+            <button class="btn-club-action" data-club="LLCER Anglais">Rejoindre le club</button>
+            <button class="club-dropdown-trigger" aria-label="Niveaux et événements">⋮</button>
+            <div class="club-dropdown-panel">
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('LLCER Anglais', '1ère'); return false;">Classe de 1ère</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('LLCER Anglais', 'Terminale'); return false;">Classe de Terminale</a>
+              <a href="#" class="club-dropdown-link" onclick="openClubModal('LLCER Anglais', 'Événements'); return false;">English Debate Club</a>
+            </div>
+          </div>
+        </article>
 
       </div>
+
+      <!-- SECTION PROCHAINS ÉVÉNEMENTS DU LYCÉE -->
+      <section class="school-events-section">
+        <div class="events-header">
+          <h2>Prochains Événements de la Vie Scolaire</h2>
+          <p>Participez aux ateliers inter-spécialités et aux sessions de révision en groupe organisées par les élèves et les clubs.</p>
+        </div>
+
+        <div class="events-grid">
+          <div class="event-card">
+            <div class="event-date-box">
+              <span class="day">18</span>
+              <span class="month">Oct</span>
+            </div>
+            <div class="event-info">
+              <h3>Hackathon NSI & Web Design</h3>
+              <p>Création d'un mini projet interactif en équipe. Salle informatique B12 (ouvert à tous niveaux).</p>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-date-box">
+              <span class="day">25</span>
+              <span class="month">Oct</span>
+            </div>
+            <div class="event-info">
+              <h3>Grand Débat HGGSP & SES</h3>
+              <p>Table ronde sur la mondialisation et l'économie durable. Amphithéâtre du lycée.</p>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <div class="event-date-box">
+              <span class="day">08</span>
+              <span class="month">Nov</span>
+            </div>
+            <div class="event-info">
+              <h3>Sprint Révisions Bac Blanc</h3>
+              <p>Séance d'entraide et fiches méthodologiques communes Maths, Physique et SVT.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </section>
   </main>
 
+  <!-- MODAL DE PRÉSENTATION DU CLUB -->
+  <div id="club-modal" class="club-modal-overlay" role="dialog" aria-modal="true">
+    <div class="club-modal-content">
+      <button class="club-modal-close" onclick="closeClubModal()" aria-label="Fermer la fenêtre">✕</button>
+      <div class="modal-header">
+        <div id="modal-icon" class="modal-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="modal-title">
+          <h2 id="modal-club-name">Nom du Club</h2>
+          <span id="modal-club-section" class="club-pole-badge">Niveau sélectionné</span>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p id="modal-club-description">
+          Bienvenue dans l'espace de ce club. Vous y trouverez les ressources de cours partagées, les canaux de discussion par classe et les plannings de devoirs surveillés.
+        </p>
+      </div>
+      <div class="modal-actions">
+        <button id="modal-join-btn" class="btn-club-action">Rejoindre ce club maintenant</button>
+        <button class="btn-club-action" style="background: var(--surface2); color: var(--text); border: 1px solid var(--border); box-shadow: none;" onclick="closeClubModal()">Fermer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
   <script src="../JS/navigation.js"></script>
   <script src="../JS/interactive.js"></script>
-    <script>
-    // Dropdown functionality
+  <script src="../JS/auth.js"></script>
+
+  <script>
+    // 1. GESTION DE LA RECHERCHE & DES FILTRES DE CATÉGORIES
+    const searchInput = document.getElementById('club-search');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const clubCards = document.querySelectorAll('.club-card');
+
+    function filterClubs() {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+
+      clubCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        const searchData = (card.getAttribute('data-title') + ' ' + card.querySelector('h2').textContent).toLowerCase();
+
+        const matchesCategory = (activeFilter === 'all' || category === activeFilter);
+        const matchesSearch = (!searchTerm || searchData.includes(searchTerm));
+
+        if (matchesCategory && matchesSearch) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', filterClubs);
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        filterClubs();
+      });
+    });
+
+    // 2. GESTION DES MENUS DÉROULANTS (⋮)
     document.querySelectorAll('.club-dropdown-trigger').forEach(trigger => {
       trigger.addEventListener('click', function(e) {
         e.stopPropagation();
         const card = this.closest('.club-card');
         const panel = card.querySelector('.club-dropdown-panel');
         
-        // Close other panels
         document.querySelectorAll('.club-dropdown-panel').forEach(p => {
           if (p !== panel) p.classList.remove('active');
         });
         
-        // Toggle current panel
         panel.classList.toggle('active');
       });
     });
 
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function() {
+    document.addEventListener('click', () => {
       document.querySelectorAll('.club-dropdown-panel').forEach(panel => {
         panel.classList.remove('active');
       });
     });
+
+    // 3. GESTION DU MODAL D'EXPLORATION DE CLUB
+    const modal = document.getElementById('club-modal');
+    const modalTitle = document.getElementById('modal-club-name');
+    const modalSection = document.getElementById('modal-club-section');
+    const modalJoinBtn = document.getElementById('modal-join-btn');
+
+    function openClubModal(clubName, section) {
+      modalTitle.textContent = clubName;
+      modalSection.textContent = section ? `Espace ${section}` : 'Espace Officiel';
+      modal.classList.add('active');
+
+      modalJoinBtn.onclick = () => {
+        joinClub(clubName);
+      };
+    }
+
+    function closeClubModal() {
+      modal.classList.remove('active');
+    }
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeClubModal();
+    });
+
+    document.querySelectorAll('.btn-club-action[data-club]').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const club = this.getAttribute('data-club');
+        joinClub(club);
+      });
+    });
+
+    function joinClub(clubName) {
+      const currentUser = sessionStorage.getItem('jfej_current_user');
+      if (!currentUser) {
+        if (confirm(`Pour rejoindre le club ${clubName}, vous devez être connecté. Souhaitez-vous aller sur la page de connexion ?`)) {
+          window.location.href = '../Page de Connexion/HTML/Page de connexion.html';
+        }
+        return;
+      }
+
+      alert(`Félicitations ! Vous avez rejoint le club ${clubName} de JFEJ School.`);
+      closeClubModal();
+    }
   </script>
 </body>
 </html>

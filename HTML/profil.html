@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JFEJ School — Mon Profil</title>
+  <meta name="description" content="Espace profil de l'élève sur JFEJ School, mini réseau social pour lycéens." />
+  
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="../CSS/common.css" />
+  <link rel="stylesheet" href="../CSS/profil.css" />
+</head>
+<body>
+  <input type="checkbox" id="dark-mode-toggle" />
+
+  <!-- HEADER TOPBAR -->
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="JFEJ School">
+        <div class="brand-mark">
+          <span class="letter-j">J</span>
+        </div>
+        <div class="brand-text">
+          <strong>JFEJ School</strong>
+          <span>Mini réseau social scolaire</span>
+        </div>
+      </a>
+
+      <nav class="menu" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="description.html">Description</a></li>
+          <li><a href="vie-scolaire.html">Vie scolaire</a></li>
+          <li><a href="profil.html" aria-current="page">Mon Profil</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <label class="toggle-dark-mode" for="dark-mode-toggle" aria-label="Basculer le mode sombre">
+          <div class="toggle-track">
+            <div class="toggle-knob">
+              <span class="toggle-icon toggle-icon--sun">☀</span>
+              <span class="toggle-icon toggle-icon--moon">☽</span>
+            </div>
+          </div>
+        </label>
+        <a href="#logout" id="nav-auth-btn" class="btn-cta">Se déconnecter</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- CAS 1 : UTILISATEUR CONNECTÉ -->
+    <div id="profile-logged-view" class="profile-container">
+      <!-- CARTE ENTÊTE -->
+      <section class="profile-card-header">
+        <div class="profile-user-info">
+          <div id="avatar-initials" class="profile-avatar">EN</div>
+          <div class="profile-names">
+            <h1 id="profile-display-name">Élève NSI</h1>
+            <p id="profile-display-email" class="profile-email">eleve@jfej.fr</p>
+            <div class="profile-badges">
+              <span id="badge-classe" class="badge badge-classe">1ère Générale</span>
+              <span id="badge-specialite" class="badge badge-specialite">NSI</span>
+              <span class="badge badge-status">Compte actif</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <a href="vie-scolaire.html" class="btn-cta">Voir les Clubs</a>
+          <button id="btn-quick-logout" class="btn-logout" type="button">Déconnexion</button>
+        </div>
+      </section>
+
+      <!-- STATISTIQUES RÉSEAU SCOLAIRE -->
+      <section class="profile-stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="stat-number">3</div>
+          <div class="stat-label">Clubs rejoints</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="stat-number">7</div>
+          <div class="stat-label">Ressources & Cours partagés</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="stat-number">18</div>
+          <div class="stat-label">Discussions actives</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Profil sécurisé</div>
+        </div>
+      </section>
+
+      <!-- CONTENU PRINCIPAL EN 2 COLONNES -->
+      <div class="profile-main-grid">
+        <!-- Colonne Gauche : Détails du compte -->
+        <section class="profile-card-section">
+          <h2>Détails de mon compte</h2>
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-label">Prénom</span>
+              <span id="info-prenom" class="info-value">Élève</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Nom</span>
+              <span id="info-nom" class="info-value">NSI</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Email scolaire</span>
+              <span id="info-email" class="info-value">eleve@jfej.fr</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Niveau d'études</span>
+              <span id="info-classe" class="info-value">1ère Générale</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Spécialité favorite</span>
+              <span id="info-specialite" class="info-value">Numérique et Sciences Informatiques (NSI)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Établissement</span>
+              <span class="info-value">Lycée JFEJ School</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Colonne Droite : Modifier mes informations -->
+        <section class="profile-card-section">
+          <h2>Mettre à jour mon profil</h2>
+          
+          <form id="profile-edit-form" class="edit-form">
+            <div class="edit-group">
+              <label for="edit-bio">Bio scolaire :</label>
+              <textarea id="edit-bio" class="edit-textarea" placeholder="Partagez quelques mots sur vos matières préférées, vos projets..."></textarea>
+            </div>
+
+            <div class="edit-group">
+              <label for="edit-specialite">Changer ma spécialité :</label>
+              <select id="edit-specialite" class="edit-select">
+                <option value="Numérique et Sciences Informatiques (NSI)">Numérique et Sciences Informatiques (NSI)</option>
+                <option value="Mathématique">Mathématique</option>
+                <option value="Physique">Physique</option>
+                <option value="Science de la Vie et de la Terre">Science de la Vie et de la Terre (SVT)</option>
+                <option value="Sciences Économiques et Sociales (SES)">Sciences Économiques et Sociales (SES)</option>
+                <option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option>
+                <option value="Humanités, Littérature et Philosophie (HLP)">HLP</option>
+                <option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option>
+              </select>
+            </div>
+
+            <div class="edit-group">
+              <label for="edit-classe">Changer ma classe :</label>
+              <select id="edit-classe" class="edit-select">
+                <option value="Seconde">Seconde</option>
+                <option value="1ère">1ère Générale</option>
+                <option value="Terminale">Terminale Générale</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-save-profile">Enregistrer les modifications</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <!-- CAS 2 : UTILISATEUR NON CONNECTÉ (INVITÉ) -->
+    <section id="profile-guest-view" class="guest-card">
+      <h2>Espace réservé aux élèves</h2>
+      <p>Vous n'êtes pas encore connecté. Veuillez vous identifier ou créer un compte pour accéder à votre profil et rejoindre les clubs.</p>
+      
+      <div class="guest-actions">
+        <a href="../Page de Connexion/HTML/Page de connexion.html" class="btn-cta">Se connecter</a>
+        <a href="../Page d'inscription/html/Inscription.html" class="btn-cta" style="background: var(--surface2); color: var(--text); border: 1px solid var(--border);">Créer un compte</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="../JS/navigation.js"></script>
+  <script src="../JS/auth.js"></script>
+  <script src="../JS/profil.js"></script>
+</body>
+</html>

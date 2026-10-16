@@ -1,14 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta 
-            name="viewport" 
-            content="width=device-width, initial-scale=1.0" 
-        />
-        <title> Connexion JFEJ </title>
-        <link rel="stylesheet" href="./styles.css" />
-    </head>
-    <body>
-        <a href="C:\Users\Neox\Desktop\VsCode\Page d'inscription\Inscription.htm" </a>
-        <h1> Vous n'avez pas de compte ? Créez en un</h1>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JFEJ School — Connexion</title>
+  <meta name="description" content="Connectez-vous à votre espace JFEJ School, mini réseau social pour lycéens." />
+  
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="../../CSS/common.css" />
+  <link rel="stylesheet" href="../CSS/Page de connexion.css" />
+</head>
+<body>
+  <input type="checkbox" id="dark-mode-toggle" />
+
+  <!-- HEADER TOPBAR -->
+  <header class="topbar">
+    <div class="container nav">
+      <a href="../../HTML/index.html" class="brand" aria-label="JFEJ School">
+        <div class="brand-mark">
+          <span class="letter-j">J</span>
+        </div>
+        <div class="brand-text">
+          <strong>JFEJ School</strong>
+          <span>Mini réseau social scolaire</span>
+        </div>
+      </a>
+
+      <nav class="menu" aria-label="Navigation principale">
+        <ul>
+          <li><a href="../../HTML/index.html">Accueil</a></li>
+          <li><a href="../../HTML/description.html">Description</a></li>
+          <li><a href="../../HTML/vie-scolaire.html">Vie scolaire</a></li>
+          <li><a href="../../HTML/profil.html">Mon Profil</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <label class="toggle-dark-mode" for="dark-mode-toggle" aria-label="Basculer le mode sombre">
+          <div class="toggle-track">
+            <div class="toggle-knob">
+              <span class="toggle-icon toggle-icon--sun">☀</span>
+              <span class="toggle-icon toggle-icon--moon">☽</span>
+            </div>
+          </div>
+        </label>
+        <a href="../../Page d'inscription/html/Inscription.html" class="btn-cta">S'inscrire</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL : FORMULAIRE DE CONNEXION -->
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Connexion</h1>
+        <p>Accédez à votre espace communautaire JFEJ School</p>
+      </div>
+
+      <!-- Zone de notification JS -->
+      <div id="auth-alert" class="auth-alert" role="alert"></div>
+
+      <form id="login-form" class="auth-form" action="#" method="POST" novalidate>
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Adresse email scolaire</label>
+          <div class="input-container">
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="form-input" 
+              placeholder="ex: prenom.nom@lycee.fr" 
+              required 
+              autocomplete="email"
+            />
+          </div>
+        </div>
+
+        <!-- Mot de passe -->
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <div class="input-container">
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              class="form-input" 
+              placeholder="••••••••" 
+              required 
+              autocomplete="current-password"
+            />
+            <button 
+              type="button" 
+              class="toggle-pwd-btn" 
+              data-target="password" 
+              aria-label="Afficher le mot de passe"
+            >👁️</button>
+          </div>
+        </div>
+
+        <!-- Options supplémentaires -->
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" id="remember" name="remember" />
+            <span>Se souvenir de moi</span>
+          </label>
+          <a href="#" class="forgot-password" onclick="alert('Indice pour les tests : Utilisez l\'email eleve@jfej.fr avec le mot de passe jfej2026 !'); return false;">Mot de passe oublié ?</a>
+        </div>
+
+        <!-- Bouton Soumettre -->
+        <button type="submit" class="btn-submit">Se connecter</button>
+      </form>
+
+      <div class="auth-footer">
+        <p>Vous n'avez pas encore de compte ? 
+          <a href="../../Page d'inscription/html/Inscription.html">Créer un compte</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="../../JS/navigation.js"></script>
+  <script src="../../JS/auth.js"></script>
+</body>
+</html>

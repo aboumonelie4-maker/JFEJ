@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mur du Lycée - JFEJ</title>
+    <link rel="stylesheet" href="../CSS/Mur_du_lyc%C3%A9e.css">
+</head>
+<body>
+
+    <div class="JFEJ-app" id="appContainer">
+
+        <!-- Arrière-plan orbes -->
+        <div class="JFEJ-bg">
+            <div class="JFEJ-blob JFEJ-blob--violet"></div>
+            <div class="JFEJ-blob JFEJ-blob--rose"></div>
+            <div class="JFEJ-blob JFEJ-blob--bleu"></div>
+        </div>
+
+        <!-- Sidebar -->
+        <nav class="JFEJ-sidebar">
+            <div class="JFEJ-brand">
+                <div class="JFEJ-logo-wrapper">
+                    <span class="JFEJ-logo-icon">J</span>
+                    <span class="JFEJ-brand-title">Jalifert <span class="JFEJ-star">✦</span></span>
+                </div>
+                <button class="JFEJ-toggle-btn" id="btnToggleSidebar" title="Réduire/Étendre le menu">◀</button>
+            </div>
+
+            <div class="JFEJ-links">
+                <a class="JFEJ-link" href="Accueil.html">
+                    <span class="JFEJ-link-icon">🏠</span>
+                    <span class="JFEJ-link-text">Accueil</span>
+                </a>
+                <a class="JFEJ-link" href="#" id="btnSearch">
+                    <span class="JFEJ-link-icon">🔍</span>
+                    <span class="JFEJ-link-text">Rechercher</span>
+                </a>
+                <a class="JFEJ-link is-active" href="Mur%20_du%20_lyc%C3%A9e.html">
+                    <span class="JFEJ-link-icon">▦</span>
+                    <span class="JFEJ-link-text">Mur du lycée</span>
+                    <span class="JFEJ-badge">7</span>
+                </a>
+                <a class="JFEJ-link" href="#">
+                    <span class="JFEJ-link-icon">◉</span>
+                    <span class="JFEJ-link-text">Messages</span>
+                    <span class="JFEJ-badge">3</span>
+                </a>
+                
+                <div class="JFEJ-divider"></div>
+                
+                <a class="JFEJ-link" href="#">
+                    <span class="JFEJ-link-icon">👤</span>
+                    <span class="JFEJ-link-text">Compte</span>
+                </a>
+                
+                <div class="JFEJ-more-wrapper">
+                    <a class="JFEJ-link" href="#" id="btnMore">
+                        <span class="JFEJ-link-icon">☰</span>
+                        <span class="JFEJ-link-text">Plus</span>
+                    </a>
+                    <div class="JFEJ-more-popup" id="morePopup">
+                        <a href="#"><span class="JFEJ-link-icon">🌙</span> Thème</a>
+                        <a href="#"><span class="JFEJ-link-icon">⚙</span> Paramètres</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="JFEJ-user">
+                <div class="JFEJ-avatar">J</div>
+                <div class="JFEJ-user-details">
+                    <div class="JFEJ-username">Jalifert</div>
+                    <div class="JFEJ-userrole">Développeur</div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Panneau de Recherche Coulissant -->
+        <div class="JFEJ-search-panel" id="searchPanel">
+            <h2 class="JFEJ-heading" style="font-size: 20px;">Recherche</h2>
+            <p class="JFEJ-subheading" style="margin-bottom: 12px;">Trouvez rapidement vos projets ou fichiers.</p>
+            <input type="text" class="JFEJ-search-input" placeholder="Tapez votre recherche...">
+        </div>
+
+        <!-- CONTENU PRINCIPAL : MUR DU LYCÉE -->
+        <main class="JFEJ-main">
+            <header class="JFEJ-header">
+                <h1 class="JFEJ-heading">Mur du Lycée Jalifert</h1>
+                <p class="JFEJ-subheading">Partagez les actualités de vos projets, posez vos questions d'entraide et découvrez la vie du campus.</p>
+            </header>
+
+            <div class="JFEJ-wall-container">
+
+                <!-- 1. BOÎTE DE PUBLICATION -->
+                <div class="JFEJ-publisher-box">
+                    <div class="JFEJ-publisher-top">
+                        <div class="JFEJ-avatar-small publisher-avatar">J</div>
+                        <textarea class="JFEJ-publisher-textarea" placeholder="Une question sur un devoir ? Une annonce de club ? Écrivez à tout le lycée..."></textarea>
+                    </div>
+
+                    <div class="JFEJ-publisher-tags">
+                        <span class="publisher-tag-label">Thématique :</span>
+                        <button class="JFEJ-tag-chip active">Vie du Lycée</button>
+                        <button class="JFEJ-tag-chip">Devoirs & Révisions</button>
+                        <button class="JFEJ-tag-chip">Club Robotique</button>
+                        <button class="JFEJ-tag-chip">Journal Jalifert</button>
+                        <button class="JFEJ-tag-chip">Sport & Basket</button>
+                    </div>
+
+                    <div class="JFEJ-publisher-footer">
+                        <span class="JFEJ-secure-notice">🛡️ Espace modéré et bienveillant</span>
+                        <button class="JFEJ-publish-btn">
+                            <span>Publier</span>
+                            <i>📤</i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. LISTE DES POSTS (FEED) -->
+                <div class="JFEJ-feed-list">
+
+                    <!-- Post 1 -->
+                    <article class="JFEJ-feed-card">
+                        <div class="JFEJ-feed-card-header">
+                            <div class="JFEJ-avatar-small" style="background: linear-gradient(135deg, #00d2ff, #8a2be2);">E</div>
+                            <div class="JFEJ-feed-meta">
+                                <div class="JFEJ-feed-author-line">
+                                    <span class="JFEJ-feed-author">Emma Dupont</span>
+                                    <span class="JFEJ-verified-badge">✔</span>
+                                </div>
+                                <span class="JFEJ-feed-info">@emma_dpnt • Terminale • Il y a 2 heures</span>
+                            </div>
+                            <span class="JFEJ-topic-pill">Journal du lycée</span>
+                        </div>
+
+                        <div class="JFEJ-feed-content">
+                            <p>🎉 Le numéro 12 de Jalifert Mag est en ligne ! Retrouvez notre grand dossier sur les olympiades de mathématiques et l'interview exclusive des professeurs. Bonne lecture à tous !</p>
+                            <div class="JFEJ-feed-media">Illustration</div>
+                        </div>
+
+                        <div class="JFEJ-feed-actions">
+                            <button class="JFEJ-action-btn liked">
+                                <span>❤️</span> <strong>24</strong>
+                            </button>
+                            <button class="JFEJ-action-btn">
+                                <span>💬</span> <strong>5 commentaires</strong>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="JFEJ-feed-card">
+                        <div class="JFEJ-feed-card-header">
+                            <div class="JFEJ-avatar-small" style="background: linear-gradient(135deg, #ff007f, #ffbb00);">K</div>
+                            <div class="JFEJ-feed-meta">
+                                <div class="JFEJ-feed-author-line">
+                                    <span class="JFEJ-feed-author">Karim Diallo</span>
+                                    <span class="JFEJ-verified-badge">✔</span>
+                                </div>
+                                <span class="JFEJ-feed-info">@karim_tech • Première • Il y a 5 heures</span>
+                            </div>
+                            <span class="JFEJ-topic-pill">Club Robotique</span>
+                        </div>
+
+                        <div class="JFEJ-feed-content">
+                            <p>⚡ Le club robotique organise un atelier découverte Arduino et Python ce jeudi à 16h45 au FabLab du lycée. Aucune compétence préalable requise, tout le monde est bienvenu ! Venez nombreux.</p>
+                            <div class="JFEJ-feed-media">Illustration</div>
+                        </div>
+
+                        <div class="JFEJ-feed-actions">
+                            <button class="JFEJ-action-btn liked">
+                                <span>❤️</span> <strong>38</strong>
+                            </button>
+                            <button class="JFEJ-action-btn">
+                                <span>💬</span> <strong>3 commentaires</strong>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Script JS -->
+    <script src="../JS/The_Site.js"></script>
+</body>
+</html>

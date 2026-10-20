@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil - JFEJ</title>
+    <link rel="stylesheet" href="../CSS/Accueil.css">
+</head>
+<body>
+
+    <div class="JFEJ-app" id="appContainer">
+
+        <!-- Arrière-plan orbes lumineuses -->
+        <div class="JFEJ-bg">
+            <div class="JFEJ-blob JFEJ-blob--violet"></div>
+            <div class="JFEJ-blob JFEJ-blob--rose"></div>
+            <div class="JFEJ-blob JFEJ-blob--bleu"></div>
+        </div>
+
+        <!-- Sidebar -->
+        <nav class="JFEJ-sidebar">
+            <div class="JFEJ-brand">
+                <div class="JFEJ-logo-wrapper">
+                    <span class="JFEJ-logo-icon">J</span>
+                    <span class="JFEJ-brand-title">JALIFERT <span class="JFEJ-star">✦</span></span>
+                </div>
+                <button class="JFEJ-toggle-btn" id="btnToggleSidebar" title="Réduire/Étendre le menu">◀</button>
+            </div>
+
+            <div class="JFEJ-links">
+                <a class="JFEJ-link is-active" href="Accueil.html">
+                    <span class="JFEJ-link-icon">🏠</span>
+                    <span class="JFEJ-link-text">Accueil</span>
+                </a>
+                <a class="JFEJ-link" href="#" id="btnSearch">
+                    <span class="JFEJ-link-icon">🔍</span>
+                    <span class="JFEJ-link-text">Rechercher</span>
+                </a>
+                <a class="JFEJ-link" href="Mur%20_du%20_lyc%C3%A9e.html">
+                    <span class="JFEJ-link-icon">▦</span>
+                    <span class="JFEJ-link-text">Mur du lycée</span>
+                    <span class="JFEJ-badge">7</span>
+                </a>
+                <a class="JFEJ-link" href="#">
+                    <span class="JFEJ-link-icon">◉</span>
+                    <span class="JFEJ-link-text">Messages</span>
+                    <span class="JFEJ-badge">3</span>
+                </a>
+                
+                <div class="JFEJ-divider"></div>
+                
+                <a class="JFEJ-link" href="#">
+                    <span class="JFEJ-link-icon">👤</span>
+                    <span class="JFEJ-link-text">Compte</span>
+                </a>
+                
+                <div class="JFEJ-more-wrapper">
+                    <a class="JFEJ-link" href="#" id="btnMore">
+                        <span class="JFEJ-link-icon">☰</span>
+                        <span class="JFEJ-link-text">Plus</span>
+                    </a>
+                    <div class="JFEJ-more-popup" id="morePopup">
+                        <a href="#"><span class="JFEJ-link-icon">🌙</span> Thème</a>
+                        <a href="#"><span class="JFEJ-link-icon">⚙</span> Paramètres</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="JFEJ-user">
+                <div class="JFEJ-avatar">J</div>
+                <div class="JFEJ-user-details">
+                    <div class="JFEJ-username">Jalifert</div>
+                    <div class="JFEJ-userrole">Développeur</div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Panneau de Recherche Coulissant -->
+        <div class="JFEJ-search-panel" id="searchPanel">
+            <h2 class="JFEJ-heading" style="font-size: 20px;">Recherche</h2>
+            <p class="JFEJ-subheading" style="margin-bottom: 12px;">Trouvez rapidement vos projets ou fichiers.</p>
+            <input type="text" class="JFEJ-search-input" placeholder="Tapez votre recherche...">
+        </div>
+
+        <!-- CONTENU PRINCIPAL DE L'ACCUEIL -->
+        <main class="JFEJ-main">
+            <header class="JFEJ-header">
+                <h1 class="JFEJ-heading">Accueil</h1>
+                <p class="JFEJ-subheading">Résumé de vos activités et publications non lues.</p>
+            </header>
+
+            <!-- SECTION 1: INFOS IMPORTANTES -->
+            <section class="JFEJ-banner-announcement">
+                <div class="JFEJ-announcement-icon">📌</div>
+                <div class="JFEJ-announcement-content">
+                    <h4>Annonce du Lycée - Épreuves du Bac Blanc</h4>
+                    <p>Les convocations pour le Bac Blanc sont disponibles au secrétariat. Pensez à vérifier votre numéro de salle avant vendredi.</p>
+                </div>
+                <span class="JFEJ-tag-badge">Important</span>
+            </section>
+
+            <!-- SECTION 2 & 3 : SPÉCIALITÉS & MP -->
+            <div class="JFEJ-grid-2col">
+                <div class="JFEJ-section-card">
+                    <div class="JFEJ-card-header">
+                        <h3>📚 Spécialités <span class="JFEJ-count-badge">2</span></h3>
+                        <a href="#" class="JFEJ-see-all">Tout voir</a>
+                    </div>
+                    
+                    <div class="JFEJ-list">
+                        <div class="JFEJ-item">
+                            <div class="JFEJ-item-icon spe-maths">∑</div>
+                            <div class="JFEJ-item-details">
+                                <div class="JFEJ-item-title">Spé Maths — M. Dupont</div>
+                                <div class="JFEJ-item-preview">N'oubliez pas d'imprimer le TP sur les suites récurrentes...</div>
+                            </div>
+                            <span class="JFEJ-time">10:42</span>
+                        </div>
+
+                        <div class="JFEJ-item">
+                            <div class="JFEJ-item-icon spe-nsi">💻</div>
+                            <div class="JFEJ-item-details">
+                                <div class="JFEJ-item-title">Spé NSI — Mme Martin</div>
+                                <div class="JFEJ-item-preview">Le projet SQL est à rendre avant minuit sur le dépôt.</div>
+                            </div>
+                            <span class="JFEJ-time">Hier</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="JFEJ-section-card">
+                    <div class="JFEJ-card-header">
+                        <h3>💬 Messages Privés <span class="JFEJ-count-badge">2</span></h3>
+                        <a href="#" class="JFEJ-see-all">Tout voir</a>
+                    </div>
+
+                    <div class="JFEJ-list">
+                        <div class="JFEJ-item">
+                            <div class="JFEJ-avatar-small">L</div>
+                            <div class="JFEJ-item-details">
+                                <div class="JFEJ-item-title">Lucas Bernard</div>
+                                <div class="JFEJ-item-preview">Tu as la correction de l'exercice 4 en physique ?</div>
+                            </div>
+                            <span class="JFEJ-time">11:15</span>
+                        </div>
+
+                        <div class="JFEJ-item">
+                            <div class="JFEJ-avatar-small">S</div>
+                            <div class="JFEJ-item-details">
+                                <div class="JFEJ-item-title">Sarah K.</div>
+                                <div class="JFEJ-item-preview">On se capte au CDI à la pause de 10h ?</div>
+                            </div>
+                            <span class="JFEJ-time">09:02</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4 : FEED DE FICHIERS -->
+            <section class="JFEJ-files-section">
+                <div class="JFEJ-card-header">
+                    <h3>📁 Fichiers récents non vus <span class="JFEJ-count-badge">3</span></h3>
+                    <span class="JFEJ-sub-text">Fichiers partagés dans vos Spés et vos MPs</span>
+                </div>
+
+                <div class="JFEJ-files-feed">
+                    <div class="JFEJ-file-card">
+                        <div class="JFEJ-file-badge pdf">PDF</div>
+                        <div class="JFEJ-file-info">
+                            <span class="JFEJ-file-name">Correction_DM2_Physique.pdf</span>
+                            <span class="JFEJ-file-meta">Envoyé par <b>Spé Physique</b> • 1.2 Mo</span>
+                        </div>
+                        <button class="JFEJ-file-btn" title="Télécharger">📥</button>
+                    </div>
+
+                    <div class="JFEJ-file-card">
+                        <div class="JFEJ-file-badge code">PY</div>
+                        <div class="JFEJ-file-info">
+                            <span class="JFEJ-file-name">arbre_binaire_tp.py</span>
+                            <span class="JFEJ-file-meta">Envoyé par <b>Spé NSI</b> • 14 Ko</span>
+                        </div>
+                        <button class="JFEJ-file-btn" title="Télécharger">📥</button>
+                    </div>
+
+                    <div class="JFEJ-file-card">
+                        <div class="JFEJ-file-badge img">PNG</div>
+                        <div class="JFEJ-file-info">
+                            <span class="JFEJ-file-name">Schema_Synthese_SVT.png</span>
+                            <span class="JFEJ-file-meta">Envoyé par <b>Lucas B. (MP)</b> • 3.8 Mo</span>
+                        </div>
+                        <button class="JFEJ-file-btn" title="Télécharger">📥</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Script JS -->
+    <script src="../JS/The_Site.js"></script>
+</body>
+</html>

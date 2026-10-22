@@ -1,9 +1,9 @@
 # Projets
 
-Ce dépôt contient deux projets indépendants :
+Ce dépôt contient 1 projets divisé en 2 fichiers  :
 
-- `JFEJ/` : le projet JFEJ existant.
-- `The_Site/` : le site ajouté, avec ses pages HTML, ses styles CSS et son script JavaScript.
+- `JFEJ/` : la page d'accueil et de présentation du site
+- `The_Site/` : le site même ou il est possible de communiquer avec ses amis , profs et directeurs
 
 ## Structure du dépôt
 

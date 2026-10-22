@@ -101,18 +101,52 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="specialite">Spécialité favorite</label>
-            <select id="specialite" name="specialite" class="form-select" required>
-              <option value="" disabled selected>Choisir une spé...</option>
-              <option value="Numérique et Sciences Informatiques (NSI)">NSI</option>
-              <option value="Mathématique">Mathématiques</option>
-              <option value="Physique-Chimie">Physique-Chimie</option>
-              <option value="SVT">SVT</option>
-              <option value="SES">SES</option>
-              <option value="HGGSP">HGGSP</option>
-              <option value="HLP">HLP</option>
-              <option value="LLCER">LLCER Anglais</option>
-            </select>
+            <span class="form-label">Spécialités</span>
+            <div id="registration-specialty-fields" class="registration-specialty-fields" aria-describedby="specialite-help">
+              <div class="registration-specialty-field">
+                <label for="specialite-1">Spécialité 1</label>
+                <select id="specialite-1" name="specialite-1" class="form-select">
+                  <option value="">Choisir...</option>
+                  <option value="Numérique et Sciences Informatiques (NSI)">NSI</option>
+                  <option value="Mathématique">Mathématiques</option>
+                  <option value="Physique-Chimie">Physique-Chimie</option>
+                  <option value="Science de la Vie et de la Terre">SVT</option>
+                  <option value="Sciences Économiques et Sociales (SES)">SES</option>
+                  <option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option>
+                  <option value="Humanités, Littérature et Philosophie (HLP)">HLP</option>
+                  <option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option>
+                </select>
+              </div>
+              <div class="registration-specialty-field">
+                <label for="specialite-2">Spécialité 2</label>
+                <select id="specialite-2" name="specialite-2" class="form-select">
+                  <option value="">Choisir...</option>
+                  <option value="Numérique et Sciences Informatiques (NSI)">NSI</option>
+                  <option value="Mathématique">Mathématiques</option>
+                  <option value="Physique-Chimie">Physique-Chimie</option>
+                  <option value="Science de la Vie et de la Terre">SVT</option>
+                  <option value="Sciences Économiques et Sociales (SES)">SES</option>
+                  <option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option>
+                  <option value="Humanités, Littérature et Philosophie (HLP)">HLP</option>
+                  <option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option>
+                </select>
+              </div>
+              <div class="registration-specialty-field">
+                <label for="specialite-3">Spécialité 3</label>
+                <select id="specialite-3" name="specialite-3" class="form-select">
+                  <option value="">Choisir...</option>
+                  <option value="Numérique et Sciences Informatiques (NSI)">NSI</option>
+                  <option value="Mathématique">Mathématiques</option>
+                  <option value="Physique-Chimie">Physique-Chimie</option>
+                  <option value="Science de la Vie et de la Terre">SVT</option>
+                  <option value="Sciences Économiques et Sociales (SES)">SES</option>
+                  <option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option>
+                  <option value="Humanités, Littérature et Philosophie (HLP)">HLP</option>
+                  <option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option>
+                </select>
+              </div>
+            </div>
+            <small id="specialite-help" class="form-help">Choisissez votre classe pour connaître le nombre de spécialités à sélectionner.</small>
           </div>
         </div>
 
@@ -191,6 +225,36 @@
       </div>
     </div>
   </main>
+
+  <div id="registration-confirmation" class="confirmation-overlay" hidden>
+    <section class="confirmation-dialog" role="dialog" aria-modal="true" aria-labelledby="confirmation-title" aria-describedby="confirmation-message">
+      <div class="confirmation-step" data-confirmation-step="1">
+        <h2 id="confirmation-title-1">Es-tu sûr de ton choix ?</h2>
+        <p id="confirmation-message-1">Vérifie les informations que tu viens de saisir.</p>
+        <div class="confirmation-actions">
+          <button type="button" class="confirmation-button confirmation-button--back" data-confirmation-action="home">Euh non, je me suis trompé en tapant mes infos</button>
+          <button type="button" class="confirmation-button" data-confirmation-action="next">Oui</button>
+        </div>
+      </div>
+      <div class="confirmation-step" data-confirmation-step="2" hidden>
+        <h2 id="confirmation-title-2">Si j'étais toi, je mettrais mes vraies infos</h2>
+        <p id="confirmation-message-2">Tu peux encore retourner à l'accueil pour corriger ta saisie.</p>
+        <div class="confirmation-actions">
+          <button type="button" class="confirmation-button confirmation-button--back" data-confirmation-action="home">Pardon tonton</button>
+          <button type="button" class="confirmation-button" data-confirmation-action="next">Ce sont mes vraies infos !</button>
+        </div>
+      </div>
+      <div class="confirmation-step confirmation-step--gif" data-confirmation-step="3" hidden>
+        <h2 id="confirmation-title-3">Si ce ne sont pas tes vraies infos, je vais te démasquer !</h2>
+        <img class="confirmation-gif" src="../../assets/confirmation-inscription.gif" alt="GIF humoristique de confirmation">
+        <p id="confirmation-message-3">Confirme une dernière fois pour créer ton compte.</p>
+        <div class="confirmation-actions">
+          <button type="button" class="confirmation-button confirmation-button--back" data-confirmation-action="home">Wahala padon tonton</button>
+          <button type="button" class="confirmation-button" data-confirmation-action="confirm">CE SONT MES VRAIES INFOS</button>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <!-- SCRIPTS -->
   <script src="../../JS/navigation.js"></script>

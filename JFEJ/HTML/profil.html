@@ -61,7 +61,7 @@
             <p id="profile-display-email" class="profile-email">eleve@jfej.fr</p>
             <div class="profile-badges">
               <span id="badge-classe" class="badge badge-classe">1ère Générale</span>
-              <span id="badge-specialite" class="badge badge-specialite">NSI</span>
+              <span id="badge-specialite" class="badge badge-specialite">NSI, Mathématiques, Physique-Chimie</span>
               <span class="badge badge-status">Compte actif</span>
             </div>
           </div>
@@ -128,8 +128,8 @@
               <span id="info-classe" class="info-value">1ère Générale</span>
             </div>
             <div class="info-item">
-              <span class="info-label">Spécialité favorite</span>
-              <span id="info-specialite" class="info-value">Numérique et Sciences Informatiques (NSI)</span>
+              <span class="info-label">Spécialités</span>
+              <span id="info-specialite" class="info-value">Numérique et Sciences Informatiques (NSI), Mathématique, Physique-Chimie</span>
             </div>
             <div class="info-item">
               <span class="info-label">Établissement</span>
@@ -149,17 +149,14 @@
             </div>
 
             <div class="edit-group">
-              <label for="edit-specialite">Changer ma spécialité :</label>
-              <select id="edit-specialite" class="edit-select">
-                <option value="Numérique et Sciences Informatiques (NSI)">Numérique et Sciences Informatiques (NSI)</option>
-                <option value="Mathématique">Mathématique</option>
-                <option value="Physique">Physique</option>
-                <option value="Science de la Vie et de la Terre">Science de la Vie et de la Terre (SVT)</option>
-                <option value="Sciences Économiques et Sociales (SES)">Sciences Économiques et Sociales (SES)</option>
-                <option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option>
-                <option value="Humanités, Littérature et Philosophie (HLP)">HLP</option>
-                <option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option>
-              </select>
+              <span class="specialite-label">Spécialités :</span>
+              <div id="specialite-fields" class="specialite-fields" aria-describedby="specialite-help">
+                <div class="specialite-field"><label for="edit-specialite-1">Spécialité 1</label><select id="edit-specialite-1" class="edit-select"><option value="">Choisir...</option><option value="Numérique et Sciences Informatiques (NSI)">NSI</option><option value="Mathématique">Mathématiques</option><option value="Physique-Chimie">Physique-Chimie</option><option value="Science de la Vie et de la Terre">SVT</option><option value="Sciences Économiques et Sociales (SES)">SES</option><option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option><option value="Humanités, Littérature et Philosophie (HLP)">HLP</option><option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option></select></div>
+                <div class="specialite-field"><label for="edit-specialite-2">Spécialité 2</label><select id="edit-specialite-2" class="edit-select"><option value="">Choisir...</option><option value="Numérique et Sciences Informatiques (NSI)">NSI</option><option value="Mathématique">Mathématiques</option><option value="Physique-Chimie">Physique-Chimie</option><option value="Science de la Vie et de la Terre">SVT</option><option value="Sciences Économiques et Sociales (SES)">SES</option><option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option><option value="Humanités, Littérature et Philosophie (HLP)">HLP</option><option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option></select></div>
+                <div class="specialite-field"><label for="edit-specialite-3">Spécialité 3</label><select id="edit-specialite-3" class="edit-select"><option value="">Choisir...</option><option value="Numérique et Sciences Informatiques (NSI)">NSI</option><option value="Mathématique">Mathématiques</option><option value="Physique-Chimie">Physique-Chimie</option><option value="Science de la Vie et de la Terre">SVT</option><option value="Sciences Économiques et Sociales (SES)">SES</option><option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option><option value="Humanités, Littérature et Philosophie (HLP)">HLP</option><option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option></select></div>
+              </div>
+              <small id="specialite-help" class="form-help">Choisissez 3 spécialités en Première ou 2 en Terminale. En Seconde, aucune spécialité n'est à choisir.</small>
+              <button id="btn-confirm-specialites" type="button" class="btn-save-profile">Confirmer mes spécialités</button>
             </div>
 
             <div class="edit-group">

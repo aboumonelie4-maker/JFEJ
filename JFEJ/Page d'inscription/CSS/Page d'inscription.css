@@ -105,6 +105,42 @@
   cursor: pointer;
 }
 
+.form-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.2px;
+}
+
+.registration-specialty-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 8px;
+}
+
+.registration-specialty-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.registration-specialty-field[hidden] {
+  display: none;
+}
+
+.registration-specialty-field label {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.form-help {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
 .form-select option {
   background: var(--bg);
   color: var(--text);
@@ -216,6 +252,84 @@
   background: rgba(34, 197, 94, 0.15);
   border: 1px solid rgba(34, 197, 94, 0.4);
   color: #4ade80;
+}
+
+.confirmation-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(8, 6, 26, 0.78);
+  backdrop-filter: blur(8px);
+}
+
+.confirmation-overlay[hidden],
+.confirmation-step[hidden] {
+  display: none;
+}
+
+.confirmation-dialog {
+  width: min(100%, 540px);
+  max-height: min(90vh, 780px);
+  overflow-y: auto;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.confirmation-dialog h2 {
+  margin-bottom: 12px;
+  font-size: 1.45rem;
+}
+
+.confirmation-dialog p {
+  margin-bottom: 22px;
+  color: var(--muted);
+}
+
+.confirmation-gif {
+  display: block;
+  width: min(100%, 360px);
+  max-height: 42vh;
+  object-fit: contain;
+  margin: 0 auto 22px;
+  border-radius: 14px;
+}
+
+.confirmation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.confirmation-button {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--button-start), var(--button-end));
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.confirmation-button--back {
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--text);
+}
+
+.confirmation-button:focus-visible {
+  outline: 3px solid var(--accent2);
+  outline-offset: 3px;
 }
 
 /* Pied de carte */

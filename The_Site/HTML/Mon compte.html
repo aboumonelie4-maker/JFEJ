@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mon compte - JFEJ</title>
+	<link rel="stylesheet" href="../CSS/Accueil.css">
+	<link rel="stylesheet" href="../CSS/Mon_compte.css">
+</head>
+<body data-logout-url="../../JFEJ-main/HTML/profil.html" data-login-required-url="../../JFEJ-main/HTML/profil.html">
+	<div class="JFEJ-app" id="appContainer">
+		<div class="JFEJ-bg" aria-hidden="true">
+			<div class="JFEJ-blob JFEJ-blob--violet"></div>
+			<div class="JFEJ-blob JFEJ-blob--rose"></div>
+			<div class="JFEJ-blob JFEJ-blob--bleu"></div>
+		</div>
+
+		<nav class="JFEJ-sidebar" aria-label="Navigation principale">
+			<div class="JFEJ-brand">
+				<a class="JFEJ-logo-wrapper" href="Accueil.html" aria-label="JFEJ, accueil">
+					<span class="JFEJ-logo-icon">J</span>
+					<span class="JFEJ-brand-title">JFEJ <span class="JFEJ-star">✦</span></span>
+				</a>
+				<button class="JFEJ-toggle-btn" id="btnToggleSidebar" type="button" title="Réduire ou agrandir le menu" aria-label="Réduire le menu">◀</button>
+			</div>
+
+			<div class="JFEJ-links">
+				<a class="JFEJ-link" href="Accueil.html"><span class="JFEJ-link-icon">🏠</span><span class="JFEJ-link-text">Accueil</span></a>
+				<a class="JFEJ-link" href="#" id="btnSearch"><span class="JFEJ-link-icon">🔍</span><span class="JFEJ-link-text">Rechercher</span></a>
+				<a class="JFEJ-link" href="Mur%20_du%20_lyc%C3%A9e.html"><span class="JFEJ-link-icon">▦</span><span class="JFEJ-link-text">Mur du lycée</span><span class="JFEJ-badge">7</span></a>
+				<a class="JFEJ-link" href="#messages"><span class="JFEJ-link-icon">◉</span><span class="JFEJ-link-text">Messages</span><span class="JFEJ-badge">3</span></a>
+				<div class="JFEJ-divider"></div>
+				<a class="JFEJ-link is-active" href="Mon%20compte.html" aria-current="page"><span class="JFEJ-link-icon">👤</span><span class="JFEJ-link-text">Compte</span></a>
+				<div class="JFEJ-more-wrapper">
+					<a class="JFEJ-link" href="#plus" id="btnMore" aria-expanded="false" aria-controls="morePopup"><span class="JFEJ-link-icon">☰</span><span class="JFEJ-link-text">Plus</span></a>
+					<div class="JFEJ-more-popup" id="morePopup" aria-label="Menu Plus">
+						<button type="button" class="JFEJ-more-item" id="btnTheme" aria-pressed="false"><span class="JFEJ-link-icon" aria-hidden="true">🌙</span><span id="themeLabel">Passer au mode sombre</span></button>
+						<a class="JFEJ-more-item" href="https://miabecampus.com" target="_blank" rel="noopener noreferrer"><span class="JFEJ-link-icon" aria-hidden="true">📚</span>Annales et Révisions</a>
+						<button type="button" class="JFEJ-more-item is-disabled" disabled aria-disabled="true"><span class="JFEJ-link-icon" aria-hidden="true">❔</span>FAQ (bientôt disponible)</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="JFEJ-user">
+				<div class="JFEJ-avatar" aria-hidden="true">J</div>
+				<div class="JFEJ-user-details">
+					<div class="JFEJ-username">JFEJ</div>
+					<div class="JFEJ-userrole">Élève</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="JFEJ-search-panel" id="searchPanel">
+			<h2 class="JFEJ-heading">Recherche</h2>
+			<p class="JFEJ-subheading">Trouvez rapidement vos projets ou fichiers.</p>
+			<input type="search" class="JFEJ-search-input" placeholder="Tapez votre recherche..." aria-label="Rechercher">
+		</div>
+
+		<main class="JFEJ-main account-main">
+			<header class="JFEJ-header account-page-header">
+				<h1 class="JFEJ-heading">Mon compte</h1>
+				<p class="JFEJ-subheading">Votre profil et vos informations scolaires.</p>
+			</header>
+
+			<div id="profile-logged-view" class="profile-container">
+				<section class="profile-card-header">
+					<div class="profile-user-info">
+						<div id="avatar-initials" class="profile-avatar">EN</div>
+						<div class="profile-names">
+							<h2 id="profile-display-name">Élève NSI</h2>
+							<p id="profile-display-email" class="profile-email">eleve@jfej.fr</p>
+							<div class="profile-badges">
+								<span id="badge-classe" class="badge badge-classe">1ère Générale</span>
+								<span id="badge-specialite" class="badge badge-specialite">NSI, Mathématiques, Physique-Chimie</span>
+								<span class="badge badge-status">Compte actif</span>
+							</div>
+						</div>
+					</div>
+					<div class="header-actions">
+						<button id="btn-quick-logout" class="btn-logout" type="button">Déconnexion</button>
+					</div>
+				</section>
+
+				<section class="profile-stats-grid" aria-label="Statistiques du compte">
+					<div class="stat-card"><div class="stat-icon" aria-hidden="true">♧</div><div class="stat-number">3</div><div class="stat-label">Clubs rejoints</div></div>
+					<div class="stat-card"><div class="stat-icon" aria-hidden="true">▤</div><div class="stat-number">7</div><div class="stat-label">Ressources partagées</div></div>
+					<div class="stat-card"><div class="stat-icon" aria-hidden="true">◉</div><div class="stat-number">18</div><div class="stat-label">Discussions actives</div></div>
+					<div class="stat-card"><div class="stat-icon" aria-hidden="true">✓</div><div class="stat-number">100%</div><div class="stat-label">Profil sécurisé</div></div>
+				</section>
+
+				<div class="profile-main-grid">
+					<section class="profile-card-section">
+						<h2>Détails de mon compte</h2>
+						<div class="info-list">
+							<div class="info-item"><span class="info-label">Prénom</span><span id="info-prenom" class="info-value">Élève</span></div>
+							<div class="info-item"><span class="info-label">Nom</span><span id="info-nom" class="info-value">NSI</span></div>
+							<div class="info-item"><span class="info-label">Email scolaire</span><span id="info-email" class="info-value">eleve@jfej.fr</span></div>
+							<div class="info-item"><span class="info-label">Niveau d'études</span><span id="info-classe" class="info-value">1ère Générale</span></div>
+							<div class="info-item"><span class="info-label">Spécialités</span><span id="info-specialite" class="info-value">Numérique et Sciences Informatiques (NSI), Mathématique, Physique-Chimie</span></div>
+							<div class="info-item"><span class="info-label">Établissement</span><span class="info-value">Lycée JFEJ School</span></div>
+						</div>
+					</section>
+
+					<section class="profile-card-section">
+						<h2>Mettre à jour mon profil</h2>
+						<form id="profile-edit-form" class="edit-form">
+							<div class="edit-group">
+								<label for="edit-bio">Bio scolaire</label>
+								<textarea id="edit-bio" class="edit-textarea" placeholder="Matières préférées, projets..."></textarea>
+							</div>
+							<div class="edit-group">
+								<span class="specialite-label">Spécialités</span>
+								<div id="specialite-fields" class="specialite-fields" aria-describedby="specialite-help">
+									<div class="specialite-field"><label for="edit-specialite-1">Spécialité 1</label><select id="edit-specialite-1" class="edit-select"><option value="">Choisir...</option><option value="Numérique et Sciences Informatiques (NSI)">NSI</option><option value="Mathématique">Mathématiques</option><option value="Physique-Chimie">Physique-Chimie</option><option value="Science de la Vie et de la Terre">SVT</option><option value="Sciences Économiques et Sociales (SES)">SES</option><option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option><option value="Humanités, Littérature et Philosophie (HLP)">HLP</option><option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option></select></div>
+									<div class="specialite-field"><label for="edit-specialite-2">Spécialité 2</label><select id="edit-specialite-2" class="edit-select"><option value="">Choisir...</option><option value="Numérique et Sciences Informatiques (NSI)">NSI</option><option value="Mathématique">Mathématiques</option><option value="Physique-Chimie">Physique-Chimie</option><option value="Science de la Vie et de la Terre">SVT</option><option value="Sciences Économiques et Sociales (SES)">SES</option><option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option><option value="Humanités, Littérature et Philosophie (HLP)">HLP</option><option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option></select></div>
+									<div class="specialite-field"><label for="edit-specialite-3">Spécialité 3</label><select id="edit-specialite-3" class="edit-select"><option value="">Choisir...</option><option value="Numérique et Sciences Informatiques (NSI)">NSI</option><option value="Mathématique">Mathématiques</option><option value="Physique-Chimie">Physique-Chimie</option><option value="Science de la Vie et de la Terre">SVT</option><option value="Sciences Économiques et Sociales (SES)">SES</option><option value="Histoire-Géographie, Géopolitique et Sciences Politiques(HGGSP)">HGGSP</option><option value="Humanités, Littérature et Philosophie (HLP)">HLP</option><option value="Langues, littératures et cultures étrangères et régionales (LLCER - Anglais)">LLCER Anglais</option></select></div>
+								</div>
+								<small id="specialite-help" class="form-help">Choisissez 3 spécialités en Première ou 2 en Terminale. En Seconde, aucune spécialité n'est à choisir.</small>
+								<button id="btn-confirm-specialites" type="button" class="btn-save-profile">Confirmer mes spécialités</button>
+							</div>
+							<div class="edit-group">
+								<label for="edit-classe">Classe</label>
+								<select id="edit-classe" class="edit-select">
+									<option value="Seconde">Seconde</option>
+									<option value="1ère">1ère Générale</option>
+									<option value="Terminale">Terminale Générale</option>
+								</select>
+							</div>
+							<button type="submit" class="btn-save-profile">Enregistrer les modifications</button>
+						</form>
+					</section>
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<script src="../JS/The_Site.js"></script>
+	<script src="../../JFEJ-main/JS/profil.js"></script>
+</body>
+</html>

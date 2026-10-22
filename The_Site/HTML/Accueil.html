@@ -22,7 +22,7 @@
             <div class="JFEJ-brand">
                 <div class="JFEJ-logo-wrapper">
                     <span class="JFEJ-logo-icon">J</span>
-                    <span class="JFEJ-brand-title">JALIFERT <span class="JFEJ-star">✦</span></span>
+                    <span class="JFEJ-brand-title">JFEJ <span class="JFEJ-star">✦</span></span>
                 </div>
                 <button class="JFEJ-toggle-btn" id="btnToggleSidebar" title="Réduire/Étendre le menu">◀</button>
             </div>
@@ -49,19 +49,20 @@
                 
                 <div class="JFEJ-divider"></div>
                 
-                <a class="JFEJ-link" href="#">
+                <a class="JFEJ-link" href="Mon%20compte.html">
                     <span class="JFEJ-link-icon">👤</span>
                     <span class="JFEJ-link-text">Compte</span>
                 </a>
                 
                 <div class="JFEJ-more-wrapper">
-                    <a class="JFEJ-link" href="#" id="btnMore">
+                    <a class="JFEJ-link" href="#" id="btnMore" aria-expanded="false" aria-controls="morePopup">
                         <span class="JFEJ-link-icon">☰</span>
                         <span class="JFEJ-link-text">Plus</span>
                     </a>
-                    <div class="JFEJ-more-popup" id="morePopup">
-                        <a href="#"><span class="JFEJ-link-icon">🌙</span> Thème</a>
-                        <a href="#"><span class="JFEJ-link-icon">⚙</span> Paramètres</a>
+                    <div class="JFEJ-more-popup" id="morePopup" aria-label="Menu Plus">
+                        <button type="button" class="JFEJ-more-item" id="btnTheme" aria-pressed="false"><span class="JFEJ-link-icon" aria-hidden="true">🌙</span><span id="themeLabel">Passer au mode sombre</span></button>
+                        <a class="JFEJ-more-item" href="https://miabecampus.com" target="_blank" rel="noopener noreferrer"><span class="JFEJ-link-icon" aria-hidden="true">📚</span>Annales et Révisions</a>
+                        <button type="button" class="JFEJ-more-item is-disabled" disabled aria-disabled="true"><span class="JFEJ-link-icon" aria-hidden="true">❔</span>FAQ (bientôt disponible)</button>
                     </div>
                 </div>
             </div>
@@ -69,7 +70,7 @@
             <div class="JFEJ-user">
                 <div class="JFEJ-avatar">J</div>
                 <div class="JFEJ-user-details">
-                    <div class="JFEJ-username">Jalifert</div>
+                    <div class="JFEJ-username">JFEJ</div>
                     <div class="JFEJ-userrole">Développeur</div>
                 </div>
             </div>
@@ -105,6 +106,7 @@
                     <div class="JFEJ-card-header">
                         <h3>📚 Spécialités <span class="JFEJ-count-badge">2</span></h3>
                         <a href="#" class="JFEJ-see-all">Tout voir</a>
+
                     </div>
                     
                     <div class="JFEJ-list">
